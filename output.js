@@ -1,2176 +1,861 @@
-//Sat Mar 22 2025 08:12:15 GMT+0000 (Coordinated Universal Time)
+//Fri Mar 28 2025 03:48:05 GMT+0000 (Coordinated Universal Time)
 //Base:<url id="cv1cref6o68qmpt26ol0" type="url" status="parsed" title="GitHub - echo094/decode-js: JS混淆代码的AST分析工具 AST analysis tool for obfuscated JS code" wc="2165">https://github.com/echo094/decode-js</url>
 //Modify:<url id="cv1cref6o68qmpt26olg" type="url" status="parsed" title="GitHub - smallfawn/decode_action: 世界上本来不存在加密，加密的人多了，也便成就了解密" wc="741">https://github.com/smallfawn/decode_action</url>
-var encode_version = "jsjiami.com.v5";
-var _0x1d2076 = function () {
-  var _0x37bedf = true;
-  return function (_0x4fd0e3, _0x197b33) {
-    var _0x42ec6c = _0x37bedf ? function () {
-      if (_0x197b33) {
-        var _0x1e4d72 = _0x197b33.apply(_0x4fd0e3, arguments);
-        _0x197b33 = null;
-        return _0x1e4d72;
-      }
-    } : function () {};
-    _0x37bedf = false;
-    return _0x42ec6c;
-  };
-}();
-var _0x2e3351 = _0x1d2076(this, function () {
-  var _0xdcad2c = function () {
-    return "dev";
-  };
-  var _0x3c3a98 = function () {
-    return "window";
-  };
-  var _0x51ef2b = function () {
-    var _0x16fd8b = new RegExp("\\w+ *\\(\\) *{\\w+ *['|\"].+['|\"];? *}");
-    return !_0x16fd8b.test(_0xdcad2c.toString());
-  };
-  var _0x2ba463 = function () {
-    var _0x112bcc = new RegExp("(\\\\[x|u](\\w){2,4})+");
-    return _0x112bcc.test(_0x3c3a98.toString());
-  };
-  var _0x25da2d = function (_0x214082) {
-    var _0x3d73c5 = 0 >> 1 + NaN;
-    if (_0x214082.indexOf("i" === _0x3d73c5)) {
-      _0x392625(_0x214082);
-    }
-  };
-  var _0x392625 = function (_0x1f1a31) {
-    var _0x3eff4a = 3 >> 1 + NaN;
-    if (_0x1f1a31.indexOf("true"[3]) !== _0x3eff4a) {
-      _0x25da2d(_0x1f1a31);
-    }
-  };
-  if (!_0x51ef2b()) {
-    if (!_0x2ba463()) {
-      _0x25da2d("indеxOf");
-    } else {
-      _0x25da2d("indexOf");
-    }
-  } else {
-    _0x25da2d("indеxOf");
-  }
-});
-_0x2e3351();
-var lottery;
-var ckTimer;
-var betting_sum = 0;
-var ClockEnv = {
-  num: 3,
-  numRange: "1-6"
-};
-var openCodeTimeOut = null;
-var openexpect = 0;
-var rates = null;
-var ratesArr = [];
-var maxRates = 0;
-var lotteryname = lotteryinfo.name;
-var ethdxZhushu;
-var currNumber = [];
-var zhushus = [];
-var minMoney = 1;
-var lastMoney = 0;
-function countMoney() {
-  var _0x21045a = parseInt(zhushus.length);
-  var _0x20a58d = parseInt($(".selectMultipInput").val());
-  var _0x380994 = parseFloat($(".selectMultipleCon").val());
-  var _0x3473bb = _0x21045a * minMoney * _0x20a58d * _0x380994;
-  lastMoney = _0x3473bb.toFixed(2);
-  $(".zhushu").text(_0x21045a);
-  $(".selectMultipleOldMoney").text(lastMoney);
-  $(".hemaijinerMoney").text(lastMoney);
-}
-function combines(_0x1a4dea, _0x16a2f3) {
-  var _0x149e9e = [];
-  (function f(_0x12a08f, _0x5327e3, _0x585a83) {
-    {
-      if (_0x585a83 == 0) {
-        return _0x149e9e.push(_0x12a08f);
-      }
-      for (var _0x2e0592 = 0, _0x2b7714 = _0x5327e3.length; _0x2e0592 <= _0x2b7714 - _0x585a83; _0x2e0592++) {
-        {
-          f(_0x12a08f.concat(_0x5327e3[_0x2e0592]), _0x5327e3.slice(_0x2e0592 + 1), _0x585a83 - 1);
-        }
-      }
-    }
-  })([], _0x1a4dea, _0x16a2f3);
-  return _0x149e9e;
-}
-function countFun() {
-  var _0x2ff33e = [];
-  $(".k3ethdx ul:eq(0) .ball_number").each(function () {
-    {
-      var _0x26136d = $(this);
-      if (_0x26136d.hasClass("curr")) {
-        var _0x53d1a2 = _0x26136d.attr("ball-number");
-        _0x2ff33e.push(_0x53d1a2);
-      }
-    }
-  });
-  var _0x2bbd08 = [];
-  $(".k3ethdx ul:eq(1) .ball_number").each(function () {
-    var _0x1aaa36 = $(this);
-    if (_0x1aaa36.hasClass("curr")) {
-      var _0x480442 = _0x1aaa36.attr("ball-number");
-      _0x2bbd08.push(_0x480442);
-    }
-  });
-  var _0x5cc00d = DescartesAlgorithm(_0x2ff33e, _0x2bbd08);
-  var _0x288763 = [];
-  for (var _0x5b548f = 0; _0x5b548f < _0x5cc00d.length; _0x5b548f++) {
-    {
-      var _0xc6810b = _0x5cc00d[_0x5b548f][0];
-      var _0x52ccde = _0x5cc00d[_0x5b548f][1];
-      if (!(_0xc6810b.indexOf(_0x52ccde) >= 0)) {
-        _0x288763[_0x5b548f] = _0x5cc00d[_0x5b548f][0] + "" + _0x5cc00d[_0x5b548f][1];
-      }
-    }
-  }
-  _0x288763 = filterArray(_0x288763);
-  switch (lottery_code) {
-    case "k3hzzx":
-      zhushus.length = currNumber[0].length;
-      break;
-    case "k3sthtx":
-      zhushus.length = currNumber[1].length;
-      break;
-    case "k3sthdx":
-      zhushus.length = currNumber[2].length;
-      break;
-    case "k3sbthbz":
-      zhushus.length = combines(currNumber[3], 3).length;
-      break;
-    case "k3slhtx":
-      zhushus.length = currNumber[4].length;
-      break;
-    case "k3ethfx":
-      zhushus.length = currNumber[5].length;
-      break;
-    case "k3ethdx":
-      zhushus.length = _0x5cc00d.length;
-      break;
-    case "k3ebthbz":
-      zhushus.length = combines(currNumber[8], 2).length;
-      break;
-    case "k3hhm":
-      zhushus.length = currNumber[9].length;
-      break;
-  }
-}
-function currList() {
-  var _0x56ab00 = [];
-  $(".ball_list_ul").each(function (_0x7f0890) {
-    var _0x3c1fce = [];
-    $(this).find(".curr").each(function (_0x557540) {
-      _0x3c1fce.push($(this).attr("ball-number"));
-    });
-    _0x56ab00.push(_0x3c1fce);
-  });
-  return _0x56ab00;
-}
-$(document).on("click", ".k3hzzx .ball_number", function () {
-  k3hzzx($(this));
-});
-var k3hzzx = function (_0xc6f2e7) {
-  if (rates == null) {
-    return false;
-  }
-  var _0x2390ec = _0xc6f2e7.attr("playid");
-  _0xc6f2e7.toggleClass("curr");
-  currNumber = currList();
-  countFun();
-  countMoney();
-  $(".addtobetbtn").attr("onclick", "k3hzzx_addbtn('" + _0x2390ec + "')");
-};
-var k3hzzx_addbtn = function (_0x222c6a) {
-  $(".k3hzzx .ball_number.curr").each(function () {
-    {
-      var _0x396aef = $(this);
-      var _0x37cf86 = _0x396aef.text();
-      var _0x3831e2 = _0x396aef.attr("ball-number");
-      var _0x222c6a = _0x396aef.attr("playid");
-      addtotouzhu(_0x222c6a, _0x3831e2, 1);
-    }
-  });
-  $(".k3hzzx .curr").removeClass("curr");
-};
-$(document).on("click", ".k3sthtx .ball_number", function () {
-  k3sthtx($(this));
-});
-var k3sthtx = function (_0xb3f054) {
-  if (rates == null) {
-    return false;
-  }
-  var _0x3689ff = _0xb3f054.attr("playid");
-  _0xb3f054.toggleClass("curr");
-  currNumber = currList();
-  countFun();
-  countMoney();
-  $(".addtobetbtn").attr("onclick", "k3sthtx_addbtn('" + _0x3689ff + "')");
-};
-var k3sthtx_addbtn = function (_0x56f61a) {
-  $(".k3sthtx .ball_number.curr").each(function () {
-    var _0x2a899d = $(this);
-    var _0x35b8d9 = _0x2a899d.text();
-    var _0x4d06f8 = _0x2a899d.attr("ball-number");
-    var _0x56f61a = _0x2a899d.attr("playid");
-    addtotouzhu(_0x56f61a, _0x4d06f8, 1);
-  });
-  $(".k3sthtx .curr").removeClass("curr");
-};
-$(document).on("click", ".k3sthdx .ball_number,.k3ethfx .ball_number", function () {
-  k3sthdx_1_2_3($(this));
-});
-var k3sthdx_1_2_3 = function (_0x454f0a) {
-  if (rates == null) {
-    return false;
-  }
-  var _0x5eda7f = _0x454f0a.text();
-  var _0x4a37d2 = _0x454f0a.attr("ball-number");
-  var _0x1d44e3 = _0x454f0a.attr("playid");
-  _0x454f0a.toggleClass("curr");
-  currNumber = currList();
-  countFun();
-  countMoney();
-  $(".addtobetbtn").attr("onclick", "k3sthdx_1_2_3_addbtn('" + _0x1d44e3 + "')");
-};
-var k3sthdx_1_2_3_addbtn = function (_0x4837b3) {
-  var _0x11aa89 = [];
-  $("div." + _0x4837b3 + " .ball_number").each(function () {
-    var _0x518d2f = $(this);
-    if (_0x518d2f.hasClass("curr")) {
-      var _0x3a2d4d = _0x518d2f.attr("ball-number");
-      _0x11aa89.push(_0x3a2d4d);
-    }
-  });
-  if (_0x11aa89.length > 0) {
-    {
-      addtotouzhu(_0x4837b3, _0x11aa89.join("#"), _0x11aa89.length, 1);
-    }
-  } else {
-    {
-      hsycmserror("请选择要投注的号码");
-    }
-  }
-  $("div." + _0x4837b3 + " .ball_number").removeClass("curr");
-};
-$(document).on("click", ".k3sbthbz .ball_number", function () {
-  k3sbthbz($(this));
-});
-var k3sbthbz = function (_0x1f40ac) {
-  if (rates == null) {
-    {
-      return false;
-    }
-  }
-  var _0x4b775a = _0x1f40ac.text();
-  var _0x24eeca = _0x1f40ac.attr("ball-number");
-  var _0x220821 = _0x1f40ac.attr("playid");
-  _0x1f40ac.toggleClass("curr");
-  currNumber = currList();
-  countFun();
-  countMoney();
-  $(".addtobetbtn").attr("onclick", "k3sbthbz_addbtn('" + _0x220821 + "')");
-};
-var k3sbthbz_addbtn = function (_0x1b3275) {
-  var _0x1fcd0b = [];
-  $("div." + _0x1b3275 + " .ball_number").each(function () {
-    var _0x4b7c54 = $(this);
-    if (_0x4b7c54.hasClass("curr")) {
-      var _0x29ac2c = _0x4b7c54.attr("ball-number");
-      _0x1fcd0b.push(_0x29ac2c);
-    }
-  });
-  if (_0x1fcd0b.length >= 3) {
-    var _0x933ad2 = combine(_0x1fcd0b, 3);
-    if (_0x933ad2.length == 1) {
-      {
-        addtotouzhu(_0x1b3275, _0x933ad2.join("#"), _0x933ad2.length, 1);
-      }
-    } else {
-      {
-        addtotouzhu(_0x1b3275, _0x933ad2.join("#"), _0x933ad2.length, 1);
-      }
-    }
-  } else {
-    {
-      hsycmserror("选择的投注号码不完整");
-    }
-  }
-  $("div." + _0x1b3275 + " .ball_number").removeClass("curr");
-};
-$(document).on("click", ".k3slhtx .ball_number", function () {
-  k3slhtx($(this));
-});
-var k3slhtx = function (_0x20a9b6) {
-  if (rates == null) {
-    {
-      return false;
-    }
-  }
-  var _0x34dc8b = _0x20a9b6.attr("playid");
-  _0x20a9b6.toggleClass("curr");
-  currNumber = currList();
-  countFun();
-  countMoney();
-  $(".addtobetbtn").attr("onclick", "k3slhtx_addbtn('" + _0x34dc8b + "')");
-};
-var k3slhtx_addbtn = function (_0x2d6043) {
-  $(".k3slhtx .ball_number.curr").each(function () {
-    {
-      var _0x95151a = $(this);
-      var _0x2d3c86 = _0x95151a.text();
-      var _0x36c2b9 = _0x95151a.attr("ball-number");
-      var _0x2d6043 = _0x95151a.attr("playid");
-      addtotouzhu(_0x2d6043, _0x36c2b9, 1);
-    }
-  });
-  $(".k3slhtx .curr").removeClass("curr");
-};
-$(document).on("click", ".k3ethdx .ball_number", function () {
-  var _0x708a4b = $(this).attr("ball-number");
-  var _0x238dc3 = $(this).parents("ul").index();
-  if (_0x238dc3 == 0) {
-    {
-      $(".k3ethdx ul:eq(1) a").each(function (_0x293dcb) {
-        var _0x434eca = $(this).attr("ball-number");
-        if ($(this).hasClass("curr") && parseInt(_0x434eca + "" + _0x434eca) == parseInt(_0x708a4b)) {
-          $(this).removeClass("curr");
-        }
-      });
-    }
-  } else {
-    if (_0x238dc3 == 1) {
-      $(".k3ethdx ul:eq(0) a").each(function (_0x5eba17) {
-        {
-          var _0x3e87a1 = $(this).attr("ball-number");
-          if ($(this).hasClass("curr") && parseInt(_0x3e87a1) == parseInt(_0x708a4b + "" + _0x708a4b)) {
+!function (_0x50185, _0xd98a7f) {
+  "object" == typeof exports ? module.exports = exports = _0xd98a7f() : "function" == typeof define && define.amd ? define([], _0xd98a7f) : _0x50185.CryptoJS = _0xd98a7f();
+}(this, function () {
+  var _0x5c2fb3 = _0x5c2fb3 || function (_0x3390fa, _0x5601ca) {
+    var _0x4f73fe = Object.create || function () {
+        function _0x4bb969() {}
+        return function (_0x4f960b) {
+          var _0x1f1565;
+          _0x4bb969.prototype = _0x4f960b;
+          _0x1f1565 = new _0x4bb969();
+          _0x4bb969.prototype = null;
+          return _0x1f1565;
+        };
+      }(),
+      _0x59b386 = {},
+      _0x48a65c = _0x59b386.lib = {},
+      _0x493491 = _0x48a65c.Base = function () {
+        return {
+          "extend": function (_0x5633ab) {
             {
-              $(this).removeClass("curr");
+              var _0x149f73 = _0x4f73fe(this);
+              _0x5633ab && _0x149f73.mixIn(_0x5633ab);
+              _0x149f73.hasOwnProperty("init") && this.init !== _0x149f73.init || (_0x149f73.init = function () {
+                _0x149f73.$super.init.apply(this, arguments);
+              });
+              _0x149f73.init.prototype = _0x149f73;
+              _0x149f73.$super = this;
+              return _0x149f73;
             }
+          },
+          "create": function () {
+            var _0xd56cd3 = this.extend();
+            _0xd56cd3.init.apply(_0xd56cd3, arguments);
+            return _0xd56cd3;
+          },
+          "init": function () {},
+          "mixIn": function (_0x2d09d4) {
+            for (var _0x2b3f66 in _0x2d09d4) _0x2d09d4.hasOwnProperty(_0x2b3f66) && (this[_0x2b3f66] = _0x2d09d4[_0x2b3f66]);
+            _0x2d09d4.hasOwnProperty("toString") && (this.toString = _0x2d09d4.toString);
+          },
+          "clone": function () {
+            return this.init.prototype.extend(this);
           }
-        }
-      });
-    }
-  }
-  k3ethdx($(this));
-});
-var k3ethdx = function (_0x17e0f3) {
-  if (rates == null) {
-    {
-      return false;
-    }
-  }
-  var _0x18989b = _0x17e0f3.text();
-  var _0x5d8638 = _0x17e0f3.attr("ball-number");
-  var _0x33b5be = _0x17e0f3.attr("playid");
-  _0x17e0f3.toggleClass("curr");
-  currNumber = currList();
-  countFun();
-  countMoney();
-  $(".addtobetbtn").attr("onclick", "k3ethdx_addbtn('" + _0x33b5be + "')");
-};
-var k3ethdx_addbtn = function (_0x1dccc0) {
-  var _0x55f255 = [];
-  $("div." + _0x1dccc0 + "  ul:eq(0) .ball_number").each(function () {
-    var _0x2cd527 = $(this);
-    if (_0x2cd527.hasClass("curr")) {
-      {
-        var _0x5a41ac = _0x2cd527.attr("ball-number");
-        _0x55f255.push(_0x5a41ac);
-      }
-    }
-  });
-  var _0x4e27d0 = [];
-  $("div." + _0x1dccc0 + "  ul:eq(1) .ball_number").each(function () {
-    {
-      var _0x1f18d1 = $(this);
-      if (_0x1f18d1.hasClass("curr")) {
-        var _0x509065 = _0x1f18d1.attr("ball-number");
-        _0x4e27d0.push(_0x509065);
-      }
-    }
-  });
-  if (_0x55f255.length < 1 || _0x4e27d0.length < 1) {
-    hsycmserror("选择的投注号码不完整");
-  }
-  var _0x2f8fd0 = DescartesAlgorithm(_0x55f255, _0x4e27d0);
-  console.log(_0x2f8fd0.length);
-  var _0x1caa13 = [];
-  for (var _0x256305 = 0; _0x256305 < _0x2f8fd0.length; _0x256305++) {
-    var _0xd5417d = _0x2f8fd0[_0x256305][0];
-    var _0x552975 = _0x2f8fd0[_0x256305][1];
-    if (!(_0xd5417d.indexOf(_0x552975) >= 0)) {
-      _0x1caa13[_0x256305] = _0x2f8fd0[_0x256305][0] + "" + _0x2f8fd0[_0x256305][1];
-    }
-  }
-  _0x1caa13 = filterArray(_0x1caa13);
-  if (_0x1caa13.length >= 1) {
-    {
-      addtotouzhu(_0x1dccc0, _0x1caa13.join("#"), _0x1caa13.length, 1);
-    }
-  } else {
-    {
-      hsycmserror("选择的投注号码不完整");
-    }
-  }
-  $("div." + _0x1dccc0 + " .ball_number").removeClass("curr");
-};
-$(document).on("click", ".k3ebthbz .ball_number", function () {
-  k3ebthbz($(this));
-});
-var k3ebthbz = function (_0x3f6705) {
-  if (rates == null) {
-    {
-      return false;
-    }
-  }
-  var _0x4ffdac = _0x3f6705.text();
-  var _0x2c0598 = _0x3f6705.attr("ball-number");
-  var _0x50886f = _0x3f6705.attr("playid");
-  _0x3f6705.toggleClass("curr");
-  currNumber = currList();
-  countFun();
-  countMoney();
-  $(".addtobetbtn").attr("onclick", "k3ebthbz_addbtn('" + _0x50886f + "')");
-};
-var k3ebthbz_addbtn = function (_0x34e9ea) {
-  var _0x32591c = [];
-  $("div." + _0x34e9ea + " .ball_number").each(function () {
-    var _0x4bd95e = $(this);
-    if (_0x4bd95e.hasClass("curr")) {
-      {
-        var _0x550fc4 = _0x4bd95e.attr("ball-number");
-        _0x32591c.push(_0x550fc4);
-      }
-    }
-  });
-  if (_0x32591c.length >= 2) {
-    var _0x459f7a = combine(_0x32591c, 2);
-    if (_0x459f7a.length == 1) {
-      addtotouzhu(_0x34e9ea, _0x459f7a.join("#"), _0x459f7a.length, 1);
-    } else {
-      {
-        addtotouzhu(_0x34e9ea, _0x459f7a.join("#"), _0x459f7a.length, 1);
-      }
-    }
-  } else {
-    hsycmserror("选择的投注号码不完整");
-  }
-  $("div." + _0x34e9ea + " .ball_number").removeClass("curr");
-};
-$(document).on("click", ".k3hhm .selectNumber", function () {
-  k3hhm($(this));
-});
-var k3hhm = function (_0x2718c0) {
-  if (rates == null) {
-    {
-      return false;
-    }
-  }
-  var _0x1200c4 = _0x2718c0.attr("playid");
-  _0x2718c0.toggleClass("curr");
-  currNumber = currList();
-  countFun();
-  countMoney();
-  $(".addtobetbtn").attr("onclick", "k3hhm_addbtn('" + _0x1200c4 + "')");
-};
-var k3hhm_addbtn = function (_0x5be867) {
-  $(".k3hhm .selectNumber.curr").each(function () {
-    {
-      var _0x5a60f4 = $(this);
-      var _0x3d5ae1 = _0x5a60f4.text();
-      var _0x55dcbd = _0x5a60f4.attr("ball-number");
-      var _0x5be867 = _0x5a60f4.attr("playid");
-      if (_0x5be867 == "hhmhong4hong") {
-        var _0xfebab = $(".k3hhm .selectNumberSum.curr");
-        if (_0xfebab.length != 4) {
-          {
-            hsycmserror("选择的投注号码不完整(请先选择4个号码)", -1);
-            return false;
-          }
-        }
-        var _0x291022 = [];
-        _0xfebab.each(function () {
-          _0x291022.push($(this).attr("ball-number"));
-        });
-        _0x55dcbd = _0x291022.join(",");
-      }
-      if (_0x5be867 == "hhmhong4hei") {
-        {
-          var _0xfebab = $(".k3hhm .selectNumberSum.curr");
-          if (_0xfebab.length != 4) {
-            hsycmserror("选择的投注号码不完整(请先选择4个号码)", -1);
-            return false;
-          }
-          var _0x291022 = [];
-          _0xfebab.each(function () {
-            _0x291022.push($(this).attr("ball-number"));
-          });
-          _0x55dcbd = _0x291022.join(",");
-        }
-      }
-      if (_0x5be867 == "hhmhong5hei") {
-        var _0xfebab = $(".k3hhm .selectNumberSum.curr");
-        if (_0xfebab.length != 5) {
-          {
-            hsycmserror("选择的投注号码不完整(请先选择5个号码)");
-            return false;
-          }
-        }
-        var _0x291022 = [];
-        _0xfebab.each(function () {
-          _0x291022.push($(this).attr("ball-number"));
-        });
-        _0x55dcbd = _0x291022.join(",");
-      }
-      addtotouzhu(_0x5be867, _0x55dcbd, 1);
-    }
-  });
-  $(".k3hhm .curr").removeClass("curr");
-};
-function addNumberLanAn() {
-  $(".lanIconNumber").show();
-  $("#lanIconNumberss").animate({
-    left: "303",
-    top: "-50px"
-  }, 500, function () {
-    $(this).animate({
-      top: "10px",
-      opacity: "0"
-    }, 500, function () {
-      {
-        $(this).css("display", "none");
-        $(".kuaijie").css({
-          background: "#434354"
-        });
-        $(".hemai").css({
-          background: "#434354"
-        });
-        $(this).css({
-          left: "28px",
-          top: "10px",
-          opacity: "100"
-        });
-      }
-    });
-  });
-  $("#lanIconNumbere").text(parseInt($("#lanIconNumbere").text()) + 1);
-}
-var orderList = new Array();
-var addtotouzhu = function (_0x54cc31, _0x78db86, _0x57b25a) {
-  if (rates == null) {
-    return false;
-  }
-  var _0x1c0ed4 = $(".yBettingList");
-  var _0x40cab5 = $(".selectMultipInput").val();
-  var _0x2e7759 = $(".selectMultipleCon").find("option:selected").text();
-  var _0x176148 = $(".selectMultipleCon").val();
-  var _0x195d58 = rates[_0x54cc31];
-  var _0x18c793 = generateMixed(20);
-  if (parseInt(_0x195d58.minjj) < 1) {
-    _0x195d58.minjj = 1;
-  }
-  if (parseInt(_0x195d58.maxprize) < 1) {
-    _0x195d58.maxprize = 30000;
-  }
-  var _0x2a5672 = {
-    trano: _0x18c793,
-    playtitle: _0x195d58.title,
-    playid: _0x195d58.playid,
-    number: _0x78db86,
-    zhushu: _0x57b25a ? parseInt(_0x57b25a) : 1,
-    price: parseInt(_0x40cab5) * parseInt(_0x2e7759),
-    minxf: _0x195d58.minxf,
-    totalzs: _0x195d58.totalzs,
-    maxjj: _0x195d58.maxjj,
-    minjj: _0x195d58.minjj,
-    maxzs: _0x195d58.maxzs,
-    rate: _0x195d58.rate,
-    jine: parseInt(_0x40cab5) * parseInt(_0x2e7759)
-  };
-  orderList.unshift(_0x2a5672);
-  addNumberLanAn();
-  var _0x7f3d4b = accMul(_0x195d58.minxf, _0x195d58.rate);
-  var _0x2df729 = _0x57b25a ? parseInt(_0x57b25a) : 1;
-  console.log(_0x7f3d4b);
-  var _0x210f4f = "<div class=\"yBettingList gamezhui\" id=\"" + _0x18c793 + "\">" + "<div class=\"gamezhui-1\">" + "<span><i style=\"color: #ae995c;\"class=\"iconfont\">&#xe606; </i>" + _0x195d58.title + "</span><a class=\"sc\"><i class=\"iconfont\">&#xe630;</i></a>" + "</div>" + "<div class=\"gamezhui-2\">" + "<span class=\"gamezhui-h\">" + _0x78db86 + "</span>" + "<span class=\"gamezhui-m\">" + _0x57b25a + "注," + _0x40cab5 + "倍," + _0x2e7759 + "=" + parseInt(_0x57b25a) * parseInt(_0x40cab5) * parseInt(_0x2e7759) + "元</span>" + "</div>" + "<div id=\"betting_money\" style=\"display: none;\">" + lastMoney + "</div>";
-  $(".yBettingLists").append(_0x210f4f);
-  currNumber = [];
-  zhushus = [];
-  $(".zhushu").text("0");
-  $(".selectMultipleOldMoney").text("0.00");
-};
-$(document).on("click", "#f_submit_order", function () {
-  if (orderList.length < 1) {
-    hsycmserror("请选择投注号码", -1);
-    return false;
-  }
-  var _0x1cd214 = "<div class=\"hsycms-model-btn confirm\"><button type=\"button\" class=\"cancel\">取消</button><button type=\"button\" class=\"ok\">确定</button></div>";
-  $("#confirm").append(_0x1cd214);
-  $("#mask-confirm").show();
-  $("#confirm").show();
-  $(".confirm .cancel").click(function () {
-    $("#mask-confirm").hide();
-    $("#confirm").hide();
-    $(".confirm").remove();
-    $(".hsycms-model-text").html("投注失败");
-    $("#mask-error").show();
-    $("#error").show();
-  });
-  $(".confirm .ok").click(function () {
-    $("#mask-confirm").hide();
-    $("#confirm").hide();
-    $(".confirm").remove();
-    if (!user) {
-      {
-        hsycmserror("请先登陆", -1);
-      }
-    }
-    $.ajax({
-      type: "POST",
-      url: apirooturl + "cpbuy",
-      data: {
-        orderList: orderList,
-        expect: lottery.currFullExpect,
-        lotteryname: lotteryname
-      },
-      success: function (_0x20b009) {
-        if (_0x20b009.sign) {
-          {
-            $("#orderlist_clear").click();
-            $(".kuaijie").css({
-              background: "#7b7b87"
-            });
-            $(".hemai").css({
-              background: "#7b7b87"
-            });
-            hsycms("投注成功", 1);
-          }
-        } else {
-          hsycmserror(_0x20b009.message, -1);
-        }
-      }
-    });
-  });
-  var _0x131bf6 = 0;
-  for (var _0x35f195 = 0; _0x35f195 < orderList.length; _0x35f195++) {
-    var _0x552509 = orderList[_0x35f195];
-    var _0x3571fa = rates[_0x552509.playid];
-    var _0x521efd = Number(_0x552509.price);
-    var _0x50afac = _0x552509.number;
-    _0x131bf6 += _0x521efd;
-  }
-  $("#Orderdetailtotalprice").text(_0x131bf6.toFixed(3));
-  console.log(orderList);
-});
-$(document).on("click", ".kuaijie", function () {
-  $(".addtobetbtn").click();
-  if (orderList.length < 1) {
-    {
-      hsycmserror("请选择投注号码", -1);
-      return false;
-    }
-  }
-  var _0x26d9a3 = "<div class=\"hsycms-model-btn confirm\"><button type=\"button\" class=\"cancel\">取消</button><button type=\"button\" class=\"ok\">确定</button></div>";
-  $("#confirm").append(_0x26d9a3);
-  $("#mask-confirm").show();
-  $("#confirm").show();
-  $(".confirm .cancel").click(function () {
-    $("#mask-confirm").hide();
-    $("#confirm").hide();
-    $(".confirm").remove();
-    $(".hsycms-model-text").html("投注失败");
-    $("#orderlist_clear").click();
-    $("#mask-error").show();
-    $("#error").show();
-  });
-  $(".confirm .ok").click(function () {
-    {
-      $("#mask-confirm").hide();
-      $("#confirm").hide();
-      $(".confirm").remove();
-      if (!user) {
-        {
-          hsycmserror("请先登陆", -1);
-        }
-      }
-      $.ajax({
-        type: "POST",
-        url: apirooturl + "cpbuy",
-        data: {
-          orderList: orderList,
-          expect: lottery.currFullExpect,
-          lotteryname: lotteryname
+        };
+      }(),
+      _0x1752be = _0x48a65c.WordArray = _0x493491.extend({
+        "init": function (_0x2c35f7, _0x31d96d) {
+          _0x2c35f7 = this.words = _0x2c35f7 || [];
+          _0x31d96d != _0x5601ca ? this.sigBytes = _0x31d96d : this.sigBytes = 4 * _0x2c35f7.length;
         },
-        success: function (_0x3cc494) {
-          {
-            if (_0x3cc494.sign) {
-              {
-                $("#orderlist_clear").click();
-                $(".kuaijie").css({
-                  background: "#7b7b87"
-                });
-                $(".hemai").css({
-                  background: "#7b7b87"
-                });
-                hsycms("投注成功", 1);
-              }
-            } else {
-              hsycmserror(_0x3cc494.message, -1);
-            }
-          }
-        }
-      });
-    }
-  });
-  var _0x52cadc = 0;
-  for (var _0x4f9d24 = 0; _0x4f9d24 < orderList.length; _0x4f9d24++) {
-    var _0x48fb24 = orderList[_0x4f9d24];
-    var _0x141323 = rates[_0x48fb24.playid];
-    var _0x586379 = Number(_0x48fb24.price);
-    var _0x36423f = _0x48fb24.number;
-    _0x52cadc += _0x586379;
-  }
-  $("#Orderdetailtotalprice").text(_0x52cadc.toFixed(3));
-  console.log(orderList);
-});
-$(document).on("click", ".hemai", function () {
-  $(".addtobetbtn").click();
-  if (orderList.length < 1) {
-    hsycmserror("请选择投注号码", -1);
-    return false;
-  }
-  $(".faqihemai").show();
-  $(".alert_bj").show();
-  $("body").addClass("niubihh");
-  SetHM();
-});
-$(document).on("click", ".noe", function () {
-  $(".faqihemai").removeClass("linearTop ");
-  $(".faqihemai").addClass("linearBottom");
-  setTimeout(function () {
-    $("body").removeClass("niubihh");
-    $(".alert_bj").hide();
-    $(".faqihemai").hide();
-    $("#orderlist_clear").click();
-    $(".faqihemai").removeClass("linearBottom ");
-    $(".faqihemai").addClass("linearTop");
-  }, 200);
-});
-$(document).on("click", "#buy_hemai", function () {
-  if (orderList.length < 1) {
-    {
-      hsycmserror("请选择投注号码");
-      return false;
-    }
-  }
-  if (orderList.length > 1) {
-    hsycmserror("发起合买只能投注一种玩法");
-    return false;
-  }
-  var _0x49d447 = 0;
-  var _0xa7c029 = 0;
-  var _0x5b6f51 = Number($("#fsInput").val());
-  var _0x31d1d3 = Number($("#rgInput").val());
-  var _0x13f525 = Number($("#bdInput").val());
-  var _0x57d60d = Number($("#isbaodi").hasClass("active"));
-  var _0x2e9004 = Number($(".leixing .active").attr("num"));
-  for (var _0x47e5b5 = 0; _0x47e5b5 < orderList.length; _0x47e5b5++) {
-    {
-      var _0x12212a = orderList[_0x47e5b5];
-      var _0x1be18f = rates[_0x12212a.playid];
-      var _0x4509fe = Number(_0x12212a.price);
-      var _0x46c268 = _0x12212a.number;
-      _0x49d447 += _0x4509fe;
-    }
-  }
-  if (_0x5b6f51 < 1) {
-    hsycmserror("您要分成的份数必须大于等于1");
-    $("#fsInput").focus();
-    return false;
-  } else {
-    if (_0x49d447.toFixed(2) / _0x5b6f51 < 1) {
-      hsycmserror("每份金额必须大于等于1元！");
-      $("#fsInput").focus();
-      return false;
-    } else {
-      if (_0x31d1d3 < _0x5b6f51 * 0.02) {
-        hsycmserror("您要认购的份数至少应该为所分份数的2% (" + Math.ceil(_0x5b6f51 * 0.02) + "份)！");
-        $("#rgInput").focus();
-        return false;
-      } else {
-        if (_0x31d1d3 - _0x5b6f51 > 0) {
-          {
-            hsycmserror("您要认购的份数不能大于所分的份数！");
-            $("#rgInput").focus();
-            return false;
-          }
-        } else {
-          if (_0x57d60d && _0x13f525 < 1) {
+        "toString": function (_0x43e7bc) {
+          return (_0x43e7bc || _0x4b9674).stringify(this);
+        },
+        "concat": function (_0x5aefdb) {
+          var _0x5a0b79 = this.words,
+            _0x285648 = _0x5aefdb.words,
+            _0x313076 = this.sigBytes,
+            _0x22e51c = _0x5aefdb.sigBytes;
+          if (this.clamp(), _0x313076 % 4) for (var _0x2817e8 = 0; _0x2817e8 < _0x22e51c; _0x2817e8++) {
             {
-              hsycmserror("您要保底的份数不能为空或不能为0！");
-              $("#bdInput").focus();
-              return false;
+              var _0x1632f8 = _0x285648[_0x2817e8 >>> 2] >>> 24 - _0x2817e8 % 4 * 8 & 255;
+              _0x5a0b79[_0x313076 + _0x2817e8 >>> 2] |= _0x1632f8 << 24 - (_0x313076 + _0x2817e8) % 4 * 8;
             }
           } else {
-            if (_0x57d60d && _0x13f525 - _0x5b6f51 > 0) {
-              {
-                hsycmserror("您要保底的份数不能大于所分的份数！");
-                $("#bdInput").focus();
-                return false;
-              }
-            } else {
-              if (_0x57d60d && _0x13f525 < _0x5b6f51 * 0.02) {
-                hsycmserror("保底金额至少为总金额的2% (" + Math.ceil(_0x5b6f51 * 0.02) + "份)！");
-                $("#bdInput").focus();
-                return false;
-              } else {
-                if (_0x57d60d && _0x31d1d3 + _0x13f525 > _0x5b6f51) {
-                  {
-                    hsycmserror("您要认购的份数和保底的份数之和不能大于所分的份数！");
-                    $("#bdInput").focus();
-                    return false;
-                  }
-                }
-              }
+            for (var _0x2817e8 = 0; _0x2817e8 < _0x22e51c; _0x2817e8 += 4) _0x5a0b79[_0x313076 + _0x2817e8 >>> 2] = _0x285648[_0x2817e8 >>> 2];
+          }
+          this.sigBytes += _0x22e51c;
+          return this;
+        },
+        "clamp": function () {
+          {
+            var _0x53234d = this.words,
+              _0x2e55d3 = this.sigBytes;
+            _0x53234d[_0x2e55d3 >>> 2] &= 4294967295 << 32 - _0x2e55d3 % 4 * 8;
+            _0x53234d.length = _0x3390fa.ceil(_0x2e55d3 / 4);
+          }
+        },
+        "clone": function () {
+          var _0x54aa13 = _0x493491.clone.call(this);
+          _0x54aa13.words = this.words.slice(0);
+          return _0x54aa13;
+        },
+        "random": function (_0x25032e) {
+          for (var _0x164450, _0x425512 = [], _0x8907ff = function (_0x2b4ecb) {
+              var _0x2b4ecb = _0x2b4ecb,
+                _0x23823b = 987654321,
+                _0x3376b5 = 4294967295;
+              return function () {
+                _0x23823b = 36969 * (65535 & _0x23823b) + (_0x23823b >> 16) & _0x3376b5;
+                _0x2b4ecb = 18000 * (65535 & _0x2b4ecb) + (_0x2b4ecb >> 16) & _0x3376b5;
+                var _0x5bda23 = (_0x23823b << 16) + _0x2b4ecb & _0x3376b5;
+                _0x5bda23 /= 4294967296;
+                _0x5bda23 += 0.5;
+                return _0x5bda23 * (_0x3390fa.random() > 0.5 ? 1 : -1);
+              };
+            }, _0x18465e = 0; _0x18465e < _0x25032e; _0x18465e += 4) {
+            {
+              var _0x42504e = _0x8907ff(4294967296 * (_0x164450 || _0x3390fa.random()));
+              _0x164450 = 987654071 * _0x42504e();
+              _0x425512.push(4294967296 * _0x42504e() | 0);
             }
           }
+          return new _0x1752be.init(_0x425512, _0x25032e);
         }
-      }
-    }
-  }
-  var _0x4072f3 = "<div class=\"hsycms-model-btn confirm_hemai\"><button type=\"button\" class=\"cancel\">取消</button><button type=\"button\" class=\"ok\">确定</button></div>";
-  $("#hemai_xiangxi").append(_0x4072f3);
-  $("#mask_hemai").show();
-  $("#hemai_xiangxi").show();
-  $(".confirm_hemai .cancel").click(function () {
-    {
-      $("#mask_hemai").hide();
-      $("#hemai_xiangxi").hide();
-      $(".confirm_hemai").remove();
-      $(".hsycms-model-text").html("投注失败");
-      $("#mask-error").show();
-      $("#error").show();
-      $("#orderlist_clear").click();
-    }
-  });
-  $("#fenshuhemai").text(_0x5b6f51);
-  $("#rengouhemai").text(_0x31d1d3);
-  $("#isbaodihemai").text(_0x57d60d ? "是" : "否");
-  $("#baodihemai").text(_0x57d60d ? _0x13f525 : 0);
-  var _0x2866dc = {
-    orderList: orderList,
-    expect: lottery.currFullExpect,
-    lotteryname: lotteryname,
-    isbaodi: _0x57d60d,
-    isbaomi: _0x2e9004,
-    rengouhemai: _0x31d1d3,
-    fenshuhemai: _0x5b6f51,
-    baodihemai: _0x13f525
-  };
-  console.log(_0x2866dc);
-  if (!_0x57d60d) {
-    _0x13f525 = 0;
-  }
-  _0xa7c029 = (_0x31d1d3 * (_0x49d447 / _0x5b6f51) + _0x13f525 * (_0x49d447 / _0x5b6f51)).toFixed(2);
-  $("#Orderdetailtotalpricehemai").text(_0xa7c029);
-  $(".confirm_hemai .ok").click(function () {
-    $("#mask_hemai").hide();
-    $("#hemai_xiangxi").hide();
-    $(".confirm_hemai").remove();
-    if (!user) {
-      hsycmserror("请先登陆");
-    }
-    $.ajax({
-      type: "POST",
-      url: apirooturl + "cphemai",
-      data: {
-        orderList: orderList,
-        expect: lottery.currFullExpect,
-        lotteryname: lotteryname,
-        isbaodi: _0x57d60d,
-        isbaomi: _0x2e9004,
-        rengouhemai: _0x31d1d3,
-        fenshuhemai: _0x5b6f51,
-        baodihemai: _0x13f525
+      }),
+      _0xf06c2a = _0x59b386.enc = {},
+      _0x4b9674 = _0xf06c2a.Hex = {
+        "stringify": function (_0x3ce9f0) {
+          for (var _0x46c501 = _0x3ce9f0.words, _0x4a2e1d = _0x3ce9f0.sigBytes, _0x5061ef = [], _0x2ca740 = 0; _0x2ca740 < _0x4a2e1d; _0x2ca740++) {
+            {
+              var _0x3e18c1 = _0x46c501[_0x2ca740 >>> 2] >>> 24 - _0x2ca740 % 4 * 8 & 255;
+              _0x5061ef.push((_0x3e18c1 >>> 4).toString(16));
+              _0x5061ef.push((15 & _0x3e18c1).toString(16));
+            }
+          }
+          return _0x5061ef.join("");
+        },
+        "parse": function (_0x752be3) {
+          {
+            for (var _0x2648b2 = _0x752be3.length, _0x2facde = [], _0x585a00 = 0; _0x585a00 < _0x2648b2; _0x585a00 += 2) _0x2facde[_0x585a00 >>> 3] |= parseInt(_0x752be3.substr(_0x585a00, 2), 16) << 24 - _0x585a00 % 8 * 4;
+            return new _0x1752be.init(_0x2facde, _0x2648b2 / 2);
+          }
+        }
       },
-      success: function (_0x157b7c) {
-        if (_0x157b7c.sign) {
-          {
-            $("#orderlist_clear").click();
-            $(".kuaijie").css({
-              background: "#7b7b87"
-            });
-            $(".hemai").css({
-              background: "#7b7b87"
-            });
-            hsycms("发起合买成功");
+      _0x153df4 = _0xf06c2a.Latin1 = {
+        "stringify": function (_0x32fdfe) {
+          for (var _0x38a497 = _0x32fdfe.words, _0x2f8f22 = _0x32fdfe.sigBytes, _0xb42599 = [], _0x44fb8a = 0; _0x44fb8a < _0x2f8f22; _0x44fb8a++) {
+            var _0x1e051b = _0x38a497[_0x44fb8a >>> 2] >>> 24 - _0x44fb8a % 4 * 8 & 255;
+            _0xb42599.push(String.fromCharCode(_0x1e051b));
           }
-        } else {
-          hsycmserror(_0x157b7c.message);
+          return _0xb42599.join("");
+        },
+        "parse": function (_0x3a38d3) {
+          for (var _0x5b161c = _0x3a38d3.length, _0x130a10 = [], _0x1ac2ad = 0; _0x1ac2ad < _0x5b161c; _0x1ac2ad++) _0x130a10[_0x1ac2ad >>> 2] |= (255 & _0x3a38d3.charCodeAt(_0x1ac2ad)) << 24 - _0x1ac2ad % 4 * 8;
+          return new _0x1752be.init(_0x130a10, _0x5b161c);
         }
-      }
-    });
-  });
+      },
+      _0x2cf97b = _0xf06c2a.Utf8 = {
+        "stringify": function (_0xbb7ef6) {
+          try {
+            return decodeURIComponent(escape(_0x153df4.stringify(_0xbb7ef6)));
+          } catch (_0x3833cd) {
+            throw new Error("Malformed UTF-8 data");
+          }
+        },
+        "parse": function (_0x86d146) {
+          return _0x153df4.parse(unescape(encodeURIComponent(_0x86d146)));
+        }
+      },
+      _0x1093f6 = _0x48a65c.BufferedBlockAlgorithm = _0x493491.extend({
+        "reset": function () {
+          this._data = new _0x1752be.init();
+          this._nDataBytes = 0;
+        },
+        "_append": function (_0xd31ffe) {
+          "string" == typeof _0xd31ffe && (_0xd31ffe = _0x2cf97b.parse(_0xd31ffe));
+          this._data.concat(_0xd31ffe);
+          this._nDataBytes += _0xd31ffe.sigBytes;
+        },
+        "_process": function (_0x4db868) {
+          {
+            var _0x42fd13 = this._data,
+              _0x4bd41e = _0x42fd13.words,
+              _0x7b8b3 = _0x42fd13.sigBytes,
+              _0x4fa3fa = this.blockSize,
+              _0x3d87b0 = 4 * _0x4fa3fa,
+              _0x21308e = _0x7b8b3 / _0x3d87b0;
+            _0x21308e = _0x4db868 ? _0x3390fa.ceil(_0x21308e) : _0x3390fa.max((0 | _0x21308e) - this._minBufferSize, 0);
+            var _0x2a02b7 = _0x21308e * _0x4fa3fa,
+              _0x3e6acf = _0x3390fa.min(4 * _0x2a02b7, _0x7b8b3);
+            if (_0x2a02b7) {
+              {
+                for (var _0x414d0b = 0; _0x414d0b < _0x2a02b7; _0x414d0b += _0x4fa3fa) this._doProcessBlock(_0x4bd41e, _0x414d0b);
+                var _0x50820d = _0x4bd41e.splice(0, _0x2a02b7);
+                _0x42fd13.sigBytes -= _0x3e6acf;
+              }
+            }
+            return new _0x1752be.init(_0x50820d, _0x3e6acf);
+          }
+        },
+        "clone": function () {
+          {
+            var _0x580612 = _0x493491.clone.call(this);
+            _0x580612._data = this._data.clone();
+            return _0x580612;
+          }
+        },
+        "_minBufferSize": 0
+      }),
+      _0x5f1e9f = (_0x48a65c.Hasher = _0x1093f6.extend({
+        "cfg": _0x493491.extend(),
+        "init": function (_0x3d313c) {
+          this.cfg = this.cfg.extend(_0x3d313c);
+          this.reset();
+        },
+        "reset": function () {
+          _0x1093f6.reset.call(this);
+          this._doReset();
+        },
+        "update": function (_0x118d85) {
+          this._append(_0x118d85);
+          this._process();
+          return this;
+        },
+        "finalize": function (_0x35fc06) {
+          _0x35fc06 && this._append(_0x35fc06);
+          var _0x13a658 = this._doFinalize();
+          return _0x13a658;
+        },
+        "blockSize": 16,
+        "_createHelper": function (_0x421bc1) {
+          return function (_0x59bc05, _0x2c23d3) {
+            return new _0x421bc1.init(_0x2c23d3).finalize(_0x59bc05);
+          };
+        },
+        "_createHmacHelper": function (_0x12b157) {
+          return function (_0x16e3f3, _0x1152ea) {
+            return new _0x5f1e9f.HMAC.init(_0x12b157, _0x1152ea).finalize(_0x16e3f3);
+          };
+        }
+      }), _0x59b386.algo = {});
+    return _0x59b386;
+  }(Math);
+  return _0x5c2fb3;
 });
-$(function () {
-  console.log("  ___   _____ _____ _                 _ ");
-  console.log(" / _ \\ |____ /  __ \\ |               | |");
-  console.log("/ /_\\ \\    / / /  \\/ | ___  _   _  __| |");
-  console.log("|  _  |    \\ \\ |   | |/ _ \\| | | |/ _` |");
-  console.log("| | | |.___/ / \\__/\\ | (_) | |_| | (_| |");
-  console.log("\\_| |_/\\____/ \\____/_|\\___/ \\__,_|\\__,_|--爱尚互联 30041321-小爱2020-12-10");
-  Gameinit(lotteryname);
-  lotteryrates();
-  function _0x2aa848() {
-    {
-      var _0x1054bc = $(this).attr("lottery_code");
-      _0x1054bc = "k3hzzx";
-      $(".lottery-number").find("span[way-data=\"tabDoc\"]").html("猜3个开奖号相加的和,3-10为小,11-18为大");
-    }
-  }
-  _0x2aa848();
-  if ($(".selectMultipInput").val() <= 1) {
-    {
-      $(".reduce").addClass("noReduce");
-    }
-  }
-  $(".reduce").on("click", function () {
-    _0x12eb22("-");
-    countMoney();
-  });
-  $(".selectMultiple .add").on("click", function () {
-    {
-      _0x12eb22("+");
-      countMoney();
-    }
-  });
-  $(".selectMultipInput").on("change", function () {
-    {
-      _0x12eb22();
-      countMoney();
-    }
-  });
-  $(".selectMultipleCon").on("change", function () {
-    countMoney();
-  });
-  function _0x12eb22(_0x3726b4) {
-    {
-      inputVal = isNaN(parseInt($(".selectMultipInput").val())) ? 1 : parseInt($(".selectMultipInput").val());
-      maxbeishu = 100000;
-      if (inputVal <= 1) {
-        $(".selectMultipInput").val(1);
-        $(".reduce").addClass("noReduce");
-      }
-      if (inputVal > maxbeishu) {
-        {
-          $(".selectMultipInput").val(maxbeishu);
-          $(".reduce").removeClass("noReduce");
-          $(".selectMultiple .add").addClass("noReduce");
-          return;
-        }
-      }
-      if ("+" == _0x3726b4) {
-        inputVal++;
-        if (inputVal >= maxbeishu) {
-          {
-            $(".selectMultipInput").val(maxbeishu);
-            $(".selectMultiple .add").addClass("noReduce");
-            return;
+!function (_0x5dd23e, _0x20cf5a, _0x369e22) {
+  "object" == typeof exports ? module.exports = exports = _0x20cf5a(require("./core.min"), require("./sha1.min"), require("./hmac.min")) : "function" == typeof define && define.amd ? define(["./core.min", "./sha1.min", "./hmac.min"], _0x20cf5a) : _0x20cf5a(_0x5dd23e.CryptoJS);
+}(this, function (_0x427e8d) {
+  (function () {
+    var _0x2950ee = _0x427e8d,
+      _0x271796 = _0x2950ee.lib,
+      _0xa3db13 = _0x271796.Base,
+      _0x422bb1 = _0x271796.WordArray,
+      _0x221216 = _0x2950ee.algo,
+      _0x5b919c = _0x221216.MD5,
+      _0x1f0b5c = _0x221216.EvpKDF = _0xa3db13.extend({
+        "cfg": _0xa3db13.extend({
+          "keySize": 4,
+          "hasher": _0x5b919c,
+          "iterations": 1
+        }),
+        "init": function (_0x3127dd) {
+          this.cfg = this.cfg.extend(_0x3127dd);
+        },
+        "compute": function (_0x5a7b96, _0x21377d) {
+          for (var _0x3ccae8 = this.cfg, _0x424884 = _0x3ccae8.hasher.create(), _0x4153c0 = _0x422bb1.create(), _0x57e1ed = _0x4153c0.words, _0xe02851 = _0x3ccae8.keySize, _0x198156 = _0x3ccae8.iterations; _0x57e1ed.length < _0xe02851;) {
+            {
+              _0x3b009e && _0x424884.update(_0x3b009e);
+              var _0x3b009e = _0x424884.update(_0x5a7b96).finalize(_0x21377d);
+              _0x424884.reset();
+              for (var _0xc42095 = 1; _0xc42095 < _0x198156; _0xc42095++) _0x3b009e = _0x424884.finalize(_0x3b009e), _0x424884.reset();
+              _0x4153c0.concat(_0x3b009e);
+            }
           }
-        }
-        $(".selectMultiple .add").removeClass("noReduce");
-        $(".selectMultipInput").val(inputVal);
-      } else {
-        if ("-" == _0x3726b4) {
-          inputVal--;
-          if (inputVal <= 1) {
-            $(".selectMultipInput").val(1);
-            $(".reduce").addClass("noReduce");
-            return;
-          }
-          $(".reduce").removeClass("noReduce");
-          $(".selectMultipInput").val(inputVal);
-        }
-      }
-      if (inputVal > 1 && inputVal < maxbeishu) {
-        $(".reduce").removeClass("noReduce");
-      }
-      if (inputVal < maxbeishu) {
-        {
-          $(".selectMultiple .add").removeClass("noReduce");
-        }
-      }
-    }
-  }
-  $(".yBettingLists").on("click", ".sc", function () {
-    {
-      var _0xd409ba = $(".yBettingLists").find(".yBettingList");
-      var _0x18a4db = $(this).parent().attr("id");
-      var _0x171f5d = 0;
-      _0xd409ba.each(function (_0x593435) {
-        if (_0x18a4db == orderList[_0x593435].trano) {
-          _0x171f5d = _0x593435;
+          _0x4153c0.sigBytes = 4 * _0xe02851;
+          return _0x4153c0;
         }
       });
-      orderList.splice(_0x171f5d, 1);
-      $(this).parents(".yBettingList").remove();
-      $("#lanIconNumbere").text($(".yBettingLists").find(".yBettingList").length);
-      if ($(".yBettingLists").find(".yBettingList").length <= 0) {
-        $("#lanIconNumbere").css("display", "none");
-        $(".kuaijie").css({
-          background: "#7b7b87"
-        });
-        $(".hemai").css({
-          background: "#7b7b87"
-        });
-      }
-    }
-  });
-  $("#orderlist_clear").on("click", function () {
-    $(".yBettingLists").html("");
-    $(".kuaijie").css({
-      background: "#7b7b87"
-    });
-    $(".hemai").css({
-      background: "#7b7b87"
-    });
-    $("#lanIconNumbere").text("0").css("display", "none");
-    orderList = [];
-  });
-  $(document).on("click", ".play_select_tit li", function () {
-    $(this).addClass("ssc-selected").siblings("li").removeClass("ssc-selected");
-    lottery_code = $(this).attr("lottery_code");
-    $(".lottery-number > div." + lottery_code).show().siblings("div").hide();
-    $(".ball_number").removeClass("curr");
-    currNumber = currList();
-    countFun();
-    countMoney();
-    var _0x4d605b = $(this).text();
-    $(".play_wanfa string").text(_0x4d605b);
-    $("body").removeClass("niubihh");
-    $(".play_select_insert").removeClass("linearTop ");
-    $(".play_select_insert").addClass("linearBottom");
-    setTimeout(function () {
-      $(".alert_bj").hide();
-      $(".play_select_insert").hide();
-      $(".play_select_insert").removeClass("linearBottom ");
-      $(".play_select_insert").addClass("linearTop");
-    }, 200);
-    var _0x3469ad = $(this).attr("lottery_code");
-    switch (_0x3469ad) {
-      case "k3hzzx":
-        $(".lottery-number").find("span[way-data=\"tabDoc\"]").html("猜3个开奖号相加的和,3-10为小,11-18为大");
-        break;
-      case "k3sthtx":
-        $(".play_select_prompt").find("span[way-data=\"tabDoc\"]").html("对所有相同的三个号码（111、222、333、444、555、666）进行投注，任意号码开出，即为中奖。奖金" + rates[_0x3469ad].rate + "倍");
-        break;
-      case "k3sthdx":
-        $(".play_select_prompt").find("span[way-data=\"tabDoc\"]").html("对相同的三个号码（111、222、333、444、555、666）中的任意一个进行投注，所选号码开出，即为中奖。奖金" + rates[_0x3469ad].rate + "倍");
-        break;
-      case "k3sbthbz":
-        $(".play_select_prompt").find("span[way-data=\"tabDoc\"]").html("从1～6中任选3个或多个号码，所选号码与开奖号码的3个号码相同，即为中奖。奖金" + rates[_0x3469ad].rate + "倍");
-        break;
-      case "k3slhtx":
-        $(".play_select_prompt").find("span[way-data=\"tabDoc\"]").html("对所有3个相连的号码（123、234、345、456）进行投注，任意号码开出，即为中奖。奖金" + rates[_0x3469ad].rate + "倍");
-        break;
-      case "k3ethfx":
-        $(".play_select_prompt").find("span[way-data=\"tabDoc\"]").html("从11～66中任选1个或多个号码，选号与奖号（包含11～66，不限顺序）相同，即为中奖。奖金" + rates[_0x3469ad].rate + "倍");
-        break;
-      case "k3ethdx":
-        $(".play_select_prompt").find("span[way-data=\"tabDoc\"]").html("选择1对相同号码和1个不同号码投注，选号与奖号相同，即为中奖，奖金" + rates[_0x3469ad].rate + "倍");
-        break;
-      case "k3ebthbz":
-        $(".play_select_prompt").find("span[way-data=\"tabDoc\"]").html("从1～6中任选2个或多个号码，所选号码与开奖号码任意2个号码相同，即为中奖。奖金" + rates[_0x3469ad].rate + "倍");
-        break;
-      case "k3hhm":
-        $(".play_select_prompt").find("span[way-data=\"tabDoc\"]").html("从1～6中任选2个或多个号码，所选号码与开奖号码任意2个号码相同，即为中奖。奖金" + rates[_0x3469ad].rate + "倍");
-        break;
-    }
-  });
-  function _0x31c988(_0x49c62b) {
-    if (orderList.length <= 0) {
-      return false;
-    }
-    for (var _0x47fed2 = 0; _0x47fed2 < orderList.length; _0x47fed2++) {
-      {
-        if (orderList[_0x47fed2].playid == _0x49c62b) {
-          {
-            orderList.splice(_0x47fed2, 1);
-          }
-        }
-      }
-    }
-    return orderList;
-  }
-});
-function max_number(_0x566796) {
-  var _0x2a942b = _0x566796[0];
-  var _0x6ba75a = _0x566796.length;
-  for (var _0x40546d = 1; _0x40546d < _0x6ba75a; _0x40546d++) {
-    if (_0x566796[_0x40546d] >= _0x2a942b) {
-      {
-        _0x2a942b = _0x566796[_0x40546d];
-      }
-    }
-  }
-  return _0x2a942b;
-}
-function lottery_multiple(_0x26d053, _0xf1fe3e) {
-  var _0xeb05f3 = true;
-  _0x26d053 = parseFloat(_0x26d053);
-  if (_0xf1fe3e) {
-    {
-      for (var _0x1ef32a = 0; _0x1ef32a < ratesArr.length; _0x1ef32a++) {
-        if (ratesArr[_0x1ef32a] == _0xf1fe3e) {
-          {
-            ratesArr.splice(_0x1ef32a, 1);
-          }
-        }
-      }
-      maxRates = max_number(ratesArr);
-      if (orderList[0].playid == "k3sbthbz") {
-        maxRates = _0x26d053;
-      }
-      if (orderList[0].playid == "k3sthdx") {
-        maxRates = _0x26d053;
-      }
-      if (orderList[0].playid == "k3ethfx") {
-        {
-          maxRates = _0x26d053;
-        }
-      }
-      if (orderList[0].playid == "k3ebthbz") {
-        maxRates = _0x26d053;
-      }
-      if (orderList[0].playid == "k3ethdx") {
-        maxRates = _0x26d053;
-      }
-      return;
-    }
-  }
-  if (ratesArr.length > 0) {
-    for (var _0x1ef32a = 0; _0x1ef32a < ratesArr.length; _0x1ef32a++) {
-      {
-        if (ratesArr[_0x1ef32a] == _0x26d053) {
-          _0xeb05f3 = false;
-        }
-      }
-    }
-    if (_0xeb05f3) {
-      ratesArr.push(_0x26d053);
-    }
-  } else {
-    {
-      ratesArr.push(_0x26d053);
-    }
-  }
-  maxRates = max_number(ratesArr);
-}
-function array_max(_0x499255) {
-  var _0x5c33e7 = _0x499255[0];
-  for (var _0x39e731 in _0x499255) {
-    if (_0x499255[_0x39e731] > _0x5c33e7) {
-      _0x5c33e7 = _0x499255[_0x39e731];
-    }
-  }
-  return _0x5c33e7;
-}
-function lottery_yuji_money(_0x487c6e) {
-  var _0x296828 = [];
-  var _0x2a0c7b = $(".lottery_input").val() / 1;
-  var _0x184d08 = 0;
-  var _0x11cbf9 = 0;
-  var _0x77e3c2 = 0;
-  var _0x2a0ef5 = 0;
-  for (var _0x1d0d84 = 0; _0x1d0d84 < orderList.length; _0x1d0d84++) {
-    orderList[_0x1d0d84].price = _0x2a0c7b;
-    _0x296828.push(orderList[_0x1d0d84].rate / 1);
-    _0x2a0ef5 = orderList[_0x1d0d84].rate / 1;
-    _0x11cbf9 += orderList[_0x1d0d84].price / 1 * (orderList[_0x1d0d84].zhushu / 1);
-    _0x184d08 += orderList[_0x1d0d84].zhushu / 1;
-  }
-  _0x77e3c2 = array_max(_0x296828);
-  console.log(_0x77e3c2);
-  _0x77e3c2 = _0x2a0c7b * _0x77e3c2;
-  _0x77e3c2 = _0x77e3c2.toFixed(3);
-  $(".lottery_input_text").html("最高可中<em style=\"color:#f4c829;\" class=\"max_money\">" + _0x77e3c2 + "</em>元");
-  $(".betting_sum").html(_0x184d08);
-  $(".betting_sum_moery").html(_0x11cbf9);
-}
-function isNull(_0x2d03f4) {
-  return _0x2d03f4 == "" || _0x2d03f4 == undefined || _0x2d03f4 == null ? false : _0x2d03f4;
-}
-var betting_sum_moery = 0;
-function lottery_touzhufn(_0x26f12b, _0x209a43) {
-  console.log(11);
-  var _0x18c11d = $("#lottery_sum_old_b").find(".lottery_sum_old");
-  var _0x29085f;
-  if (_0x18c11d.length > 0) {
-    _0x18c11d.each(function (_0x190471) {
-      {
-        if ($(this).attr("lottery_sum") == _0x26f12b) {
-          {
-            _0x29085f = $(this).attr("lottery_sum");
-          }
-        }
-      }
-    });
-    if (_0x29085f == _0x26f12b) {
-      {
-        $("#lottery_sum_old_b").find(".lottery_sum_old[lottery_sum=\"" + _0x29085f + "\"]").remove();
-        if (orderList[0].playid == "k3sbthbz" || orderList[0].playid == "k3ebthbz") {
-          {
-            $(".betting_sum").text(_0x209a43);
-            betting_sum = _0x209a43;
-          }
-        } else {
-          if (orderList[0].playid == "k3ethdx") {
-            {
-              $(".betting_sum").text(ethdxZhushu);
-            }
-          } else {
-            betting_sum = parseInt(_0x209a43);
-            $(".betting_sum").text(betting_sum);
-          }
-        }
-        betting_sum_moery = isNaN(parseInt($(".lottery_input").val())) ? 0 : parseInt($(".lottery_input").val());
-        $(".betting_sum_moery").text(betting_sum_moery * betting_sum);
-        lottery_multiple(orderList[0].rate, orderList[0].rate);
-      }
-    } else {
-      {
-        if (orderList[0].playid == "k3sbthbz" || orderList[0].playid == "k3ebthbz") {
-          {
-            $(".betting_sum").text(_0x209a43);
-            betting_sum = _0x209a43;
-          }
-        } else {
-          if (orderList[0].playid == "k3ethdx") {
-            $(".betting_sum").text(ethdxZhushu);
-          } else {
-            betting_sum = parseInt(_0x209a43);
-            $(".betting_sum").text(betting_sum);
-          }
-        }
-        $("#lottery_sum_old_b").append("<em class=\"lottery_sum_old\" lottery_sum=\"" + _0x26f12b + "\"  >" + _0x26f12b + "</em>");
-        betting_sum_moery = isNaN(parseInt($(".lottery_input").val())) ? 0 : parseInt($(".lottery_input").val());
-        $(".betting_sum_moery").text(betting_sum_moery * betting_sum);
-        lottery_multiple(orderList[0].rate);
-      }
-    }
-  } else {
-    {
-      if (orderList[0].playid == "k3sbthbz" || orderList[0].playid == "k3ebthbz") {
-        {
-          $(".betting_sum").text(_0x209a43);
-          betting_sum = _0x209a43;
-        }
-      } else {
-        if (orderList[0].playid == "k3ethdx") {
-          $(".betting_sum").text(ethdxZhushu);
-        } else {
-          {
-            betting_sum = parseInt(_0x209a43);
-            $(".betting_sum").text(betting_sum);
-          }
-        }
-      }
-      $("#lottery_sum_old_b").append("<em class=\"lottery_sum_old\" lottery_sum=\"" + _0x26f12b + "\"  >" + _0x26f12b + "</em>");
-      betting_sum_moery = isNaN(parseInt($(".lottery_input").val())) ? 0 : parseInt($(".lottery_input").val());
-      $(".betting_sum_moery").text(betting_sum_moery * betting_sum);
-      lottery_multiple(orderList[0].rate);
-    }
-  }
-}
-$(document).on("click", "[data-setbetmoney]", function () {
-  var _0x443e24 = $(this).attr("data-setbetmoney");
-  var _0x1553e4 = $(this).attr("data-trano");
-  var _0x52cc52 = $(this).attr("data-zhushu");
-  var _0x29afd6 = $("#usebetting_moneys");
-  var _0x2c67e0 = 0;
-  if (_0x29afd6.val() == "" || parseInt(_0x29afd6.val()) < 1) {
-    _0x2c67e0 = _0x443e24;
-  } else {
-    {
-      _0x2c67e0 = parseInt(_0x29afd6.val()) + parseInt(_0x443e24);
-    }
-  }
-  _0x29afd6.val(_0x2c67e0);
-  changebetokmoney(_0x2c67e0, _0x52cc52);
-  changeorderprice(_0x2c67e0, _0x1553e4);
-});
-function accMul(_0x3096bb, _0x86757f) {
-  var _0x47ffa4 = 0;
-  var _0x39d03e = _0x3096bb.toString();
-  var _0x16b6de = _0x86757f.toString();
-  try {
-    _0x47ffa4 += _0x39d03e.split(".")[1].length;
-  } catch (_0x2b5809) {}
-  try {
-    _0x47ffa4 += _0x16b6de.split(".")[1].length;
-  } catch (_0x3fbd71) {}
-  return Number(_0x39d03e.replace(".", "")) * Number(_0x16b6de.replace(".", "")) / Math.pow(10, _0x47ffa4);
-}
-function changebetokmoney(_0x1b2b49, _0x23a64b) {
-  var _0x7b851 = accMul(_0x1b2b49, _0x23a64b);
-  $("#ordertotalprice").text(_0x7b851.toFixed(3));
-}
-var changeorderprice = function (_0x39cb11, _0x59540c) {
-  if (orderList.length >= 1) {
-    for (var _0x1eda61 = 0; _0x1eda61 < orderList.length; _0x1eda61++) {
-      {
-        var _0x3b1f45 = orderList[_0x1eda61];
-        if (_0x3b1f45.trano == _0x59540c) {
-          orderList[_0x1eda61].price = _0x39cb11;
-        }
-      }
-    }
-  }
-};
-function GamePageSwitchToggle() {
-  $("#PageSwitch").toggle();
-  if ($("#PageSwitch").hasClass("yyplay_select_container")) {
-    $(".theme-red .title").find(".icon-sanjiaoxing").css("transform", "rotate(360deg)");
-    $("#PageSwitch").removeClass("yyplay_select_container");
-  } else {
-    $(".theme-red .title").find(".icon-sanjiaoxing").css("transform", "rotate(180deg)");
-    $("#PageSwitch").addClass("yyplay_select_container");
-  }
-}
-var chars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-function generateMixed(_0x35476f) {
-  var _0x2c35bf = "";
-  for (var _0x349fb9 = 0; _0x349fb9 < _0x35476f; _0x349fb9++) {
-    var _0x5c3478 = Math.ceil(Math.random() * 35);
-    _0x2c35bf += chars[_0x5c3478];
-  }
-  return _0x2c35bf;
-}
-var Gameinit = function (_0x21ed4c) {
-  clearInterval(openCodeTimeOut);
-  lotteryname = _0x21ed4c;
-  lotterytimes(_0x21ed4c);
-  lotteryopencodes(_0x21ed4c);
-  getUserBetsListToday(_0x21ed4c);
-};
-var yIndex = 1;
-var lotterytimesId;
-var lotterytimes = function (_0xcda510) {
-  clearTimeout(lotterytimesId);
-  var _0x2310d8 = null;
-  var _0x47f378 = null;
-  var _0x21b4b9 = apirooturl + "lotterytimes";
-  $.post(_0x21b4b9, {
-    lotteryname: _0xcda510
-  }, function (_0x4baea1) {
-    var _0x3840da = {
-      IIGRG: function _0x19228a(_0x1f6945, _0x4a563a) {
-        return _0x1f6945(_0x4a563a);
-      }
+    _0x2950ee.EvpKDF = function (_0x203926, _0x22711b, _0x400edd) {
+      return _0x1f0b5c.create(_0x400edd).compute(_0x203926, _0x22711b);
     };
-    if (_0x4baea1.sign == true) {
-      lottery = _0x4baea1.data;
-      way.set("showExpect", lottery);
-      if (yIndex > 1) {
-        var _0x368134 = 9;
-        $(function () {
-          if (_0x368134 == 9) {
-            var _0x273c8e = setInterval(function () {
+  })();
+  return _0x427e8d.EvpKDF;
+});
+!function (_0xc11f4d, _0x39c07d) {
+  "object" == typeof exports ? module.exports = exports = _0x39c07d(require("./core.min")) : "function" == typeof define && define.amd ? define(["./core.min"], _0x39c07d) : _0x39c07d(_0xc11f4d.CryptoJS);
+}(this, function (_0x246915) {
+  (function () {
+    function _0x429dfa(_0x7e4a72, _0x47ae8f, _0x194ada) {
+      {
+        for (var _0x2c6967 = [], _0x5a656b = 0, _0x353a35 = 0; _0x353a35 < _0x47ae8f; _0x353a35++) if (_0x353a35 % 4) {
+          var _0x47e8a6 = _0x194ada[_0x7e4a72.charCodeAt(_0x353a35 - 1)] << _0x353a35 % 4 * 2,
+            _0xf8f7f5 = _0x194ada[_0x7e4a72.charCodeAt(_0x353a35)] >>> 6 - _0x353a35 % 4 * 2;
+          _0x2c6967[_0x5a656b >>> 2] |= (_0x47e8a6 | _0xf8f7f5) << 24 - _0x5a656b % 4 * 8;
+          _0x5a656b++;
+        }
+        return _0x645fdc.create(_0x2c6967, _0x5a656b);
+      }
+    }
+    var _0x15610e = _0x246915,
+      _0x8e9113 = _0x15610e.lib,
+      _0x645fdc = _0x8e9113.WordArray,
+      _0x417130 = _0x15610e.enc;
+    _0x417130.Base64 = {
+      "stringify": function (_0x30727d) {
+        var _0x50b054 = _0x30727d.words,
+          _0x212529 = _0x30727d.sigBytes,
+          _0x3ea4cb = this._map;
+        _0x30727d.clamp();
+        for (var _0x149625 = [], _0x5525f1 = 0; _0x5525f1 < _0x212529; _0x5525f1 += 3) for (var _0x519ffe = _0x50b054[_0x5525f1 >>> 2] >>> 24 - _0x5525f1 % 4 * 8 & 255, _0x37c61e = _0x50b054[_0x5525f1 + 1 >>> 2] >>> 24 - (_0x5525f1 + 1) % 4 * 8 & 255, _0x416b80 = _0x50b054[_0x5525f1 + 2 >>> 2] >>> 24 - (_0x5525f1 + 2) % 4 * 8 & 255, _0x3a06d0 = _0x519ffe << 16 | _0x37c61e << 8 | _0x416b80, _0x4338cc = 0; _0x4338cc < 4 && _0x5525f1 + 0.75 * _0x4338cc < _0x212529; _0x4338cc++) _0x149625.push(_0x3ea4cb.charAt(_0x3a06d0 >>> 6 * (3 - _0x4338cc) & 63));
+        var _0x5eb1b6 = _0x3ea4cb.charAt(64);
+        if (_0x5eb1b6) {
+          for (; _0x149625.length % 4;) _0x149625.push(_0x5eb1b6);
+        }
+        return _0x149625.join("");
+      },
+      "parse": function (_0x5f1ac2) {
+        var _0x1866db = _0x5f1ac2.length,
+          _0x4f34c0 = this._map,
+          _0x91c0e2 = this._reverseMap;
+        if (!_0x91c0e2) {
+          {
+            _0x91c0e2 = this._reverseMap = [];
+            for (var _0x571ff3 = 0; _0x571ff3 < _0x4f34c0.length; _0x571ff3++) _0x91c0e2[_0x4f34c0.charCodeAt(_0x571ff3)] = _0x571ff3;
+          }
+        }
+        var _0x65561 = _0x4f34c0.charAt(64);
+        if (_0x65561) {
+          var _0x3ec298 = _0x5f1ac2.indexOf(_0x65561);
+          _0x3ec298 !== -1 && (_0x1866db = _0x3ec298);
+        }
+        return _0x429dfa(_0x5f1ac2, _0x1866db, _0x91c0e2);
+      },
+      "_map": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
+    };
+  })();
+  return _0x246915.enc.Base64;
+});
+!function (_0x2646e5, _0x5b5fb7, _0x4ee4da) {
+  "object" == typeof exports ? module.exports = exports = _0x5b5fb7(require("./core.min"), require("./evpkdf.min")) : "function" == typeof define && define.amd ? define(["./core.min", "./evpkdf.min"], _0x5b5fb7) : _0x5b5fb7(_0x2646e5.CryptoJS);
+}(this, function (_0x1e7a74) {
+  _0x1e7a74.lib.Cipher || function (_0x52f856) {
+    var _0x5948f7 = _0x1e7a74,
+      _0x15b8cb = _0x5948f7.lib,
+      _0x611c66 = _0x15b8cb.Base,
+      _0x36b5f1 = _0x15b8cb.WordArray,
+      _0x2e3584 = _0x15b8cb.BufferedBlockAlgorithm,
+      _0x5e2e45 = _0x5948f7.enc,
+      _0x543ccf = (_0x5e2e45.Utf8, _0x5e2e45.Base64),
+      _0x305b30 = _0x5948f7.algo,
+      _0x2c3911 = _0x305b30.EvpKDF,
+      _0x4da540 = _0x15b8cb.Cipher = _0x2e3584.extend({
+        "cfg": _0x611c66.extend(),
+        "createEncryptor": function (_0x10057f, _0x28c437) {
+          return this.create(this._ENC_XFORM_MODE, _0x10057f, _0x28c437);
+        },
+        "createDecryptor": function (_0x2c46c2, _0x20201b) {
+          return this.create(this._DEC_XFORM_MODE, _0x2c46c2, _0x20201b);
+        },
+        "init": function (_0x22db8f, _0x54d14d, _0x470d9b) {
+          this.cfg = this.cfg.extend(_0x470d9b);
+          this._xformMode = _0x22db8f;
+          this._key = _0x54d14d;
+          this.reset();
+        },
+        "reset": function () {
+          _0x2e3584.reset.call(this);
+          this._doReset();
+        },
+        "process": function (_0x3b26f6) {
+          this._append(_0x3b26f6);
+          return this._process();
+        },
+        "finalize": function (_0x4cae41) {
+          {
+            _0x4cae41 && this._append(_0x4cae41);
+            var _0x31a9c7 = this._doFinalize();
+            return _0x31a9c7;
+          }
+        },
+        "keySize": 4,
+        "ivSize": 4,
+        "_ENC_XFORM_MODE": 1,
+        "_DEC_XFORM_MODE": 2,
+        "_createHelper": function () {
+          function _0x3b4e80(_0x172b69) {
+            return "string" == typeof _0x172b69 ? _0xfe46b2 : _0x36e820;
+          }
+          return function (_0x2b0c7e) {
+            return {
+              "encrypt": function (_0x1cc387, _0x5ea1c2, _0x2b496b) {
+                return _0x3b4e80(_0x5ea1c2).encrypt(_0x2b0c7e, _0x1cc387, _0x5ea1c2, _0x2b496b);
+              },
+              "decrypt": function (_0x49b6bd, _0x36e7fe, _0x499f83) {
+                return _0x3b4e80(_0x36e7fe).decrypt(_0x2b0c7e, _0x49b6bd, _0x36e7fe, _0x499f83);
+              }
+            };
+          };
+        }()
+      }),
+      _0x5741f2 = (_0x15b8cb.StreamCipher = _0x4da540.extend({
+        "_doFinalize": function () {
+          {
+            var _0xc00e4d = this._process(true);
+            return _0xc00e4d;
+          }
+        },
+        "blockSize": 1
+      }), _0x5948f7.mode = {}),
+      _0x4ab23b = _0x15b8cb.BlockCipherMode = _0x611c66.extend({
+        "createEncryptor": function (_0x462d04, _0x2c8d6b) {
+          return this.Encryptor.create(_0x462d04, _0x2c8d6b);
+        },
+        "createDecryptor": function (_0x427e21, _0x11bbef) {
+          return this.Decryptor.create(_0x427e21, _0x11bbef);
+        },
+        "init": function (_0x1ce6cf, _0x153378) {
+          this._cipher = _0x1ce6cf;
+          this._iv = _0x153378;
+        }
+      }),
+      _0x49e19f = _0x5741f2.CBC = function () {
+        {
+          function _0x3ba884(_0x4aabdc, _0x5c28d8, _0x14a366) {
+            {
+              var _0x4a178f = this._iv;
+              if (_0x4a178f) {
+                var _0x4fcdf4 = _0x4a178f;
+                this._iv = _0x52f856;
+              } else var _0x4fcdf4 = this._prevBlock;
+              for (var _0x5d71e8 = 0; _0x5d71e8 < _0x14a366; _0x5d71e8++) _0x4aabdc[_0x5c28d8 + _0x5d71e8] ^= _0x4fcdf4[_0x5d71e8];
+            }
+          }
+          var _0x524dce = _0x4ab23b.extend();
+          _0x524dce.Encryptor = _0x524dce.extend({
+            "processBlock": function (_0x40ead1, _0x3b737d) {
               {
-                if (_0x368134 == 0) {
-                  $(".alerts button").html("确定(" + _0x368134 + "秒后自动关闭)");
-                  $(".alerts button").click();
-                  _0x368134 = 9;
-                  clearInterval(_0x273c8e);
-                } else {
-                  $(".alerts button").html("确定(" + _0x368134 + "秒后自动关闭)");
-                  _0x368134--;
-                }
-              }
-            }, 1000);
-          }
-        });
-        hsycmss("<span style=\"color:red;\">" + lottery.lastFullExpect + "</span>期已截止<br />当前期号<span style=\"color:red;\">" + lottery.currFullExpect + "</span><br />投注时请注意期号");
-      }
-      yIndex++;
-      if (lottery.remainTime && eval(lottery.remainTime) > 1) {
-        {
-          countdownTime(lottery.remainTime, lotterytimes, _0xcda510);
-          _0x2310d8 = lottery.lastFullExpect;
-          _0x47f378 = lottery.openRemainTime;
-          if (_0x2310d8) {
-            clearTimeout(openCodeTimeOut);
-            $("[way-data='showExpect.currFullExpect']").text(lottery.currFullExpect);
-            openexpect = lottery.lastFullExpect;
-            ckTimer = true;
-            start();
-            openCodeTimeOut = setTimeout(function () {
-              loadopencode(_0xcda510);
-            }, 5000);
-          }
-        }
-      } else {
-        if (lottery.currFullExpect == "000000") {
-          _0x2310d8 = lottery.lastFullExpect;
-        } else {
-          lotterytimesId = setTimeout(function () {
-            _0x3840da.IIGRG(lotterytimes, _0xcda510);
-          }, 5000);
-        }
-      }
-    } else {
-      if (_0x4baea1.sign == false) {
-        lotterytimesId = setTimeout(function () {
-          {
-            lotterytimes(_0xcda510);
-          }
-        }, 5000);
-      }
-    }
-  }, "json");
-};
-var lotteryopencodesid;
-var lotteryopencodes = function (_0x296fce) {
-  clearTimeout(lotteryopencodesid);
-  var _0x2ca59f = apirooturl + "lotteryopencodes";
-  var _0x2c8e60 = "";
-  var _0x35c21e = $("#fn_getoPenGame").find("tbody");
-  _0x35c21e.html("");
-  $.post(_0x2ca59f, {
-    lotteryname: _0x296fce
-  }, function (_0x4aa62d) {
-    var _0x3f820a = {
-      Ygsts: function _0x52bf88(_0x524318) {
-        return _0x524318();
-      }
-    };
-    if (_0x4aa62d.sign == true) {
-      var _0x5921a8 = _0x4aa62d.data;
-      for (var _0x55aaf5 in _0x5921a8) {
-        var _0x53aa26 = _0x5921a8[_0x55aaf5];
-        if (!_0x53aa26.opencode) {
-          _0x53aa26.opencode = "0,0,0";
-        }
-        var _0x4f9fc9 = _0x53aa26.opencode.split(",");
-        var _0x2ac289 = parseInt(_0x4f9fc9[0]) + parseInt(_0x4f9fc9[1]) + parseInt(_0x4f9fc9[2]);
-        var _0x46aadd = "";
-        var _0x57b805 = "";
-        if (_0x2ac289 > 10) {
-          _0x46aadd = "<i>大</i>";
-        } else {
-          _0x46aadd = "<i>小</i>";
-        }
-        if (_0x2ac289 % 2 != 0) {
-          _0x57b805 = "<i>单</i>";
-        } else {
-          _0x57b805 = "<i>双</i>";
-        }
-        var _0x35ffd5 = _0x53aa26.opencode;
-        _0x35ffd5 = _0x35ffd5.split(",");
-        var _0x41ee19 = "";
-        for (var _0x5bc7cc in _0x35ffd5) {
-          _0x41ee19 += "<b class=\"bet-item\"><i data-v-e60a1042=\"\" class=\"Dice Dice" + _0x35ffd5[_0x5bc7cc] + "\"></i></b>";
-        }
-        _0x2c8e60 += "<div class=\"lotterys\"><div class=\"rq\">第 " + _0x53aa26.expect + " 期</div><div class=\"hm\">" + _0x41ee19 + "</div><div class=\"k3hz\"><em class=\"k3hz_1\">" + _0x2ac289 + "</em><em class=\"k3hz_2\">" + _0x46aadd + "</em><em class=\"k3hz_3\">" + _0x57b805 + "</em></div></div>";
-      }
-      _0x35c21e.html(_0x2c8e60);
-    } else {
-      if (_0x4aa62d.sign == false) {
-        lotteryopencodesid = setTimeout(function () {
-          _0x3f820a.Ygsts(lotteryopencodes);
-        }, 5000);
-      }
-    }
-  }, "json");
-};
-var lotteryratesId;
-var lotteryrates = function () {
-  clearTimeout(lotteryratesId);
-  rates = k3lotteryrates.rates;
-  $.each(rates, function (_0x3ba1ba, _0x434c18) {
-    var _0x3627aa = _0x434c18.playid;
-    $(".ball_aid[rate_" + _0x3627aa + "]").text("赔率" + _0x434c18.rate);
-  });
-};
-var loadopencodecount = 0;
-var loadopencode = function (_0x4f30c5) {
-  var _0x387beb = apirooturl + "loadopencode";
-  var _0x5216a8 = false;
-  clearTimeout(openCodeTimeOut);
-  $.ajax({
-    type: "post",
-    url: _0x387beb,
-    data: {
-      lotteryname: _0x4f30c5,
-      expect: openexpect
-    },
-    cache: false,
-    dataType: "json",
-    success: function (_0x3daa10) {
-      if (_0x3daa10.sign == true) {
-        if (_0x3daa10.data.opencode.length > 0) {
-          loadopencodecount = 0;
-          if (openCodeTimeOut) {
-            clearTimeout(openCodeTimeOut);
-          }
-          var _0x221c33 = way.get("showExpect.lastFullExpect");
-          if (_0x221c33 == openexpect) {
-            var _0x4357e7 = _0x3daa10.data.opencode;
-            var _0x5e504b = _0x4357e7.split(",");
-            stopLottery(_0x4357e7);
-            lotteryopencodes(_0x4f30c5);
-            getUserBetsListToday();
-          }
-        } else {
-          _0x5216a8 = true;
-        }
-        var _0x221c33 = way.get("showExpect.expect");
-        if (_0x221c33 == openexpect && _0x3daa10.data.opencode.length <= 0) {
-          if (openCodeTimeOut) {
-            clearTimeout(openCodeTimeOut);
-          }
-          openCodeTimeOut = setInterval(function () {
-            {
-              loadopencode(_0x4f30c5, openexpect);
-            }
-          }, 5000);
-        }
-      } else {
-        loadopencodecount++;
-        if (loadopencodecount <= 80) {
-          openCodeTimeOut = setInterval(function () {
-            loadopencode(_0x4f30c5, openexpect);
-          }, 5000);
-        } else {
-          {
-            window.location.reload();
-          }
-        }
-      }
-    },
-    error: function () {
-      openCodeTimeOut = setTimeout(function () {
-        loadopencode(_0x4f30c5, openexpect);
-      }, 5000);
-    }
-  });
-};
-function openResult() {}
-var jqueryGridPage = 1;
-var jqueryGridRows = 10;
-function getUserBetsListToday(_0x594fab) {
-  if (!user || user.islogin != 1) {
-    return false;
-  }
-  lotteryname = _0x594fab ? _0x594fab : lotteryname;
-  var _0x919429 = $("#userbetshistorylist");
-  _0x919429.empty();
-  var _0x46176e = apirooturl + "betslisttoday";
-  var _0x1212d4 = $.pagination({
-    render: ".paging",
-    pageSize: jqueryGridRows,
-    pageLength: 3,
-    ajaxType: "post",
-    hideGo: true,
-    ajaxUrl: _0x46176e,
-    ajaxData: {
-      lotteryname: lotteryname,
-      jqueryGridPage: jqueryGridPage,
-      jqueryGridRows: jqueryGridRows
-    },
-    complete: function () {},
-    success: function (_0x1e94dc) {
-      {
-        _0x919429.empty();
-        var _0x296861 = "<tr><td>期号</td><td>投注金额</td><td>奖金</td><td>操作</td></tr>";
-        _0x919429.append(_0x296861);
-        $.each(_0x1e94dc, function (_0x5dfe89, _0x34fb35) {
-          var _0x5553c4 = "";
-          _0x5553c4 += "<tr id=\"" + _0x34fb35.trano + "\">";
-          _0x5553c4 += "<td>" + _0x34fb35.expect + "</td>";
-          _0x5553c4 += "<td>" + _0x34fb35.amount + "</td>";
-          if (_0x34fb35.isdraw == 0) {
-            {
-              _0x5553c4 += "<td><t style=\"color:#fff\">等待开奖</t></td>";
-            }
-          } else {
-            {
-              _0x5553c4 += "<td>" + (_0x34fb35.okamount ? _0x34fb35.okamount : 0) + "</td>";
-            }
-          }
-          if (_0x34fb35.isdraw == -1) {
-            _0x5553c4 += "<td><t style=\"color:#fff\">未中奖</t></td>";
-          } else {
-            if (_0x34fb35.isdraw == 1) {
-              _0x5553c4 += "<td><t style=\"color:red\">已中奖</t></td>";
-            } else {
-              if (_0x34fb35.isdraw == -2) {
-                _0x5553c4 += "<td style=\"color:#fff\"><del>已撤单</del></td>";
-              } else {
-                if (_0x34fb35.isdraw == 0) {
-                  _0x5553c4 += "<td><t class=\"state\" onclick=\"javascript:getBillInfo('" + _0x34fb35.trano + "')\" style=\"color:red;cursor:pointer;\">撤单</t></td>";
-                } else {
-                  _0x5553c4 += "<td><t>未知状态</t></td>";
-                }
+                var _0x5c9201 = this._cipher,
+                  _0x27a9ab = _0x5c9201.blockSize;
+                _0x3ba884.call(this, _0x40ead1, _0x3b737d, _0x27a9ab);
+                _0x5c9201.encryptBlock(_0x40ead1, _0x3b737d);
+                this._prevBlock = _0x40ead1.slice(_0x3b737d, _0x3b737d + _0x27a9ab);
               }
             }
+          });
+          _0x524dce.Decryptor = _0x524dce.extend({
+            "processBlock": function (_0x510701, _0x24e8a5) {
+              var _0x3a5220 = this._cipher,
+                _0x2d2dfc = _0x3a5220.blockSize,
+                _0x477b3d = _0x510701.slice(_0x24e8a5, _0x24e8a5 + _0x2d2dfc);
+              _0x3a5220.decryptBlock(_0x510701, _0x24e8a5);
+              _0x3ba884.call(this, _0x510701, _0x24e8a5, _0x2d2dfc);
+              this._prevBlock = _0x477b3d;
+            }
+          });
+          return _0x524dce;
+        }
+      }(),
+      _0x3064a3 = _0x5948f7.pad = {},
+      _0x5ce22b = _0x3064a3.Pkcs7 = {
+        "pad": function (_0x5ae817, _0x45e47f) {
+          {
+            for (var _0xef43d0 = 4 * _0x45e47f, _0x157ce0 = _0xef43d0 - _0x5ae817.sigBytes % _0xef43d0, _0x4a8cd5 = _0x157ce0 << 24 | _0x157ce0 << 16 | _0x157ce0 << 8 | _0x157ce0, _0x2013fd = [], _0x3137ee = 0; _0x3137ee < _0x157ce0; _0x3137ee += 4) _0x2013fd.push(_0x4a8cd5);
+            var _0x8cf1c0 = _0x36b5f1.create(_0x2013fd, _0x157ce0);
+            _0x5ae817.concat(_0x8cf1c0);
           }
-          _0x5553c4 += "</tr>";
-          _0x919429.append(_0x5553c4);
+        },
+        "unpad": function (_0x3a2ca2) {
+          {
+            var _0x156b64 = 255 & _0x3a2ca2.words[_0x3a2ca2.sigBytes - 1 >>> 2];
+            _0x3a2ca2.sigBytes -= _0x156b64;
+          }
+        }
+      },
+      _0x56d81b = (_0x15b8cb.BlockCipher = _0x4da540.extend({
+        "cfg": _0x4da540.cfg.extend({
+          "mode": _0x49e19f,
+          "padding": _0x5ce22b
+        }),
+        "reset": function () {
+          _0x4da540.reset.call(this);
+          var _0x49e364 = this.cfg,
+            _0x20232b = _0x49e364.iv,
+            _0x3fc881 = _0x49e364.mode;
+          if (this._xformMode == this._ENC_XFORM_MODE) var _0x23631b = _0x3fc881.createEncryptor;else {
+            var _0x23631b = _0x3fc881.createDecryptor;
+            this._minBufferSize = 1;
+          }
+          this._mode && this._mode.__creator == _0x23631b ? this._mode.init(this, _0x20232b && _0x20232b.words) : (this._mode = _0x23631b.call(_0x3fc881, this, _0x20232b && _0x20232b.words), this._mode.__creator = _0x23631b);
+        },
+        "_doProcessBlock": function (_0x3eee0c, _0x168730) {
+          this._mode.processBlock(_0x3eee0c, _0x168730);
+        },
+        "_doFinalize": function () {
+          var _0x214189 = this.cfg.padding;
+          if (this._xformMode == this._ENC_XFORM_MODE) {
+            _0x214189.pad(this._data, this.blockSize);
+            var _0xa59626 = this._process(true);
+          } else {
+            {
+              var _0xa59626 = this._process(true);
+              _0x214189.unpad(_0xa59626);
+            }
+          }
+          return _0xa59626;
+        },
+        "blockSize": 4
+      }), _0x15b8cb.CipherParams = _0x611c66.extend({
+        "init": function (_0x4ab647) {
+          this.mixIn(_0x4ab647);
+        },
+        "toString": function (_0x567584) {
+          return (_0x567584 || this.formatter).stringify(this);
+        }
+      })),
+      _0x17c0af = _0x5948f7.format = {},
+      _0x50674e = _0x17c0af.OpenSSL = {
+        "stringify": function (_0x1fe937) {
+          {
+            var _0x3cd483 = _0x1fe937.ciphertext,
+              _0x2ee741 = _0x1fe937.salt;
+            if (_0x2ee741) var _0x36dfb2 = _0x36b5f1.create([1398893684, 1701076831]).concat(_0x2ee741).concat(_0x3cd483);else var _0x36dfb2 = _0x3cd483;
+            return _0x36dfb2.toString(_0x543ccf);
+          }
+        },
+        "parse": function (_0x4ee002) {
+          var _0x4844bf = _0x543ccf.parse(_0x4ee002),
+            _0x2948b1 = _0x4844bf.words;
+          if (1398893684 == _0x2948b1[0] && 1701076831 == _0x2948b1[1]) {
+            {
+              var _0x1c7996 = _0x36b5f1.create(_0x2948b1.slice(2, 4));
+              _0x2948b1.splice(0, 4);
+              _0x4844bf.sigBytes -= 16;
+            }
+          }
+          return _0x56d81b.create({
+            "ciphertext": _0x4844bf,
+            "salt": _0x1c7996
+          });
+        }
+      },
+      _0x36e820 = _0x15b8cb.SerializableCipher = _0x611c66.extend({
+        "cfg": _0x611c66.extend({
+          "format": _0x50674e
+        }),
+        "encrypt": function (_0x20635c, _0x3b2bfe, _0x3cf1e8, _0x4038d7) {
+          {
+            _0x4038d7 = this.cfg.extend(_0x4038d7);
+            var _0x320d1e = _0x20635c.createEncryptor(_0x3cf1e8, _0x4038d7),
+              _0x19b76b = _0x320d1e.finalize(_0x3b2bfe),
+              _0x5751df = _0x320d1e.cfg;
+            return _0x56d81b.create({
+              "ciphertext": _0x19b76b,
+              "key": _0x3cf1e8,
+              "iv": _0x5751df.iv,
+              "algorithm": _0x20635c,
+              "mode": _0x5751df.mode,
+              "padding": _0x5751df.padding,
+              "blockSize": _0x20635c.blockSize,
+              "formatter": _0x4038d7.format
+            });
+          }
+        },
+        "decrypt": function (_0x3555de, _0x5b0adf, _0x4c2a81, _0x2b8854) {
+          {
+            _0x2b8854 = this.cfg.extend(_0x2b8854);
+            _0x5b0adf = this._parse(_0x5b0adf, _0x2b8854.format);
+            var _0x39640b = _0x3555de.createDecryptor(_0x4c2a81, _0x2b8854).finalize(_0x5b0adf.ciphertext);
+            return _0x39640b;
+          }
+        },
+        "_parse": function (_0x58403a, _0xd70375) {
+          return "string" == typeof _0x58403a ? _0xd70375.parse(_0x58403a, this) : _0x58403a;
+        }
+      }),
+      _0x34e85a = _0x5948f7.kdf = {},
+      _0x375c38 = _0x34e85a.OpenSSL = {
+        "execute": function (_0x9b42e4, _0x4056df, _0x115b47, _0x8e1526) {
+          {
+            _0x8e1526 || (_0x8e1526 = _0x36b5f1.random(8));
+            var _0x201ff6 = _0x2c3911.create({
+                "keySize": _0x4056df + _0x115b47
+              }).compute(_0x9b42e4, _0x8e1526),
+              _0x4b9ad3 = _0x36b5f1.create(_0x201ff6.words.slice(_0x4056df), 4 * _0x115b47);
+            _0x201ff6.sigBytes = 4 * _0x4056df;
+            return _0x56d81b.create({
+              "key": _0x201ff6,
+              "iv": _0x4b9ad3,
+              "salt": _0x8e1526
+            });
+          }
+        }
+      },
+      _0xfe46b2 = _0x15b8cb.PasswordBasedCipher = _0x36e820.extend({
+        "cfg": _0x36e820.cfg.extend({
+          "kdf": _0x375c38
+        }),
+        "encrypt": function (_0x545d16, _0x4cc4d0, _0x235522, _0x5eaa91) {
+          {
+            _0x5eaa91 = this.cfg.extend(_0x5eaa91);
+            var _0x12692e = _0x5eaa91.kdf.execute(_0x235522, _0x545d16.keySize, _0x545d16.ivSize);
+            _0x5eaa91.iv = _0x12692e.iv;
+            var _0x35aab9 = _0x36e820.encrypt.call(this, _0x545d16, _0x4cc4d0, _0x12692e.key, _0x5eaa91);
+            _0x35aab9.mixIn(_0x12692e);
+            return _0x35aab9;
+          }
+        },
+        "decrypt": function (_0x33fc77, _0x5e286f, _0x52a1ea, _0x1bd557) {
+          _0x1bd557 = this.cfg.extend(_0x1bd557);
+          _0x5e286f = this._parse(_0x5e286f, _0x1bd557.format);
+          var _0x3a63a5 = _0x1bd557.kdf.execute(_0x52a1ea, _0x33fc77.keySize, _0x33fc77.ivSize, _0x5e286f.salt);
+          _0x1bd557.iv = _0x3a63a5.iv;
+          var _0x7e4fc = _0x36e820.decrypt.call(this, _0x33fc77, _0x5e286f, _0x3a63a5.key, _0x1bd557);
+          return _0x7e4fc;
+        }
+      });
+  }();
+});
+!function (_0x49c143, _0x596259) {
+  "object" == typeof exports ? module.exports = exports = _0x596259(require("./core.min")) : "function" == typeof define && define.amd ? define(["./core.min"], _0x596259) : _0x596259(_0x49c143.CryptoJS);
+}(this, function (_0x5538a8) {
+  !function () {
+    {
+      var _0x1f580c = _0x5538a8,
+        _0x303b5e = _0x1f580c.lib,
+        _0x2db239 = _0x303b5e.Base,
+        _0x20dc56 = _0x1f580c.enc,
+        _0x2663da = _0x20dc56.Utf8,
+        _0x5a515a = _0x1f580c.algo;
+      _0x5a515a.HMAC = _0x2db239.extend({
+        "init": function (_0x4fb77b, _0x25fdd1) {
+          {
+            _0x4fb77b = this._hasher = new _0x4fb77b.init();
+            "string" == typeof _0x25fdd1 && (_0x25fdd1 = _0x2663da.parse(_0x25fdd1));
+            var _0x286bad = _0x4fb77b.blockSize,
+              _0x50cde7 = 4 * _0x286bad;
+            _0x25fdd1.sigBytes > _0x50cde7 && (_0x25fdd1 = _0x4fb77b.finalize(_0x25fdd1));
+            _0x25fdd1.clamp();
+            for (var _0x38e159 = this._oKey = _0x25fdd1.clone(), _0x42bdfc = this._iKey = _0x25fdd1.clone(), _0x4405b7 = _0x38e159.words, _0xd9d6de = _0x42bdfc.words, _0x3e9cca = 0; _0x3e9cca < _0x286bad; _0x3e9cca++) _0x4405b7[_0x3e9cca] ^= 1549556828, _0xd9d6de[_0x3e9cca] ^= 909522486;
+            _0x38e159.sigBytes = _0x42bdfc.sigBytes = _0x50cde7;
+            this.reset();
+          }
+        },
+        "reset": function () {
+          var _0x5c5440 = this._hasher;
+          _0x5c5440.reset();
+          _0x5c5440.update(this._iKey);
+        },
+        "update": function (_0x4418df) {
+          this._hasher.update(_0x4418df);
+          return this;
+        },
+        "finalize": function (_0x49048f) {
+          var _0x260224 = this._hasher,
+            _0x543711 = _0x260224.finalize(_0x49048f);
+          _0x260224.reset();
+          var _0x169b77 = _0x260224.finalize(this._oKey.clone().concat(_0x543711));
+          return _0x169b77;
+        }
+      });
+    }
+  }();
+});
+!function (_0x2102a9, _0x3616ee, _0x22ad77) {
+  "object" == typeof exports ? module.exports = exports = _0x3616ee(require("./core.min"), require("./cipher-core.min")) : "function" == typeof define && define.amd ? define(["./core.min", "./cipher-core.min"], _0x3616ee) : _0x3616ee(_0x2102a9.CryptoJS);
+}(this, function (_0x5d0ea7) {
+  _0x5d0ea7.mode.ECB = function () {
+    {
+      var _0x5e9a84 = _0x5d0ea7.lib.BlockCipherMode.extend();
+      _0x5e9a84.Encryptor = _0x5e9a84.extend({
+        "processBlock": function (_0x48691f, _0x3fbb9e) {
+          this._cipher.encryptBlock(_0x48691f, _0x3fbb9e);
+        }
+      });
+      _0x5e9a84.Decryptor = _0x5e9a84.extend({
+        "processBlock": function (_0x3ac3cb, _0x1b0683) {
+          this._cipher.decryptBlock(_0x3ac3cb, _0x1b0683);
+        }
+      });
+      return _0x5e9a84;
+    }
+  }();
+  return _0x5d0ea7.mode.ECB;
+});
+!function (_0x4bffba, _0x14d02a, _0x437aaa) {
+  "object" == typeof exports ? module.exports = exports = _0x14d02a(require("./core.min"), require("./cipher-core.min")) : "function" == typeof define && define.amd ? define(["./core.min", "./cipher-core.min"], _0x14d02a) : _0x14d02a(_0x4bffba.CryptoJS);
+}(this, function (_0x329796) {
+  return _0x329796.pad.Pkcs7;
+});
+!function (_0x16f4e7, _0x1f9681, _0x579f4c) {
+  "object" == typeof exports ? module.exports = exports = _0x1f9681(require("./core.min"), require("./enc-base64.min"), require("./md5.min"), require("./evpkdf.min"), require("./cipher-core.min")) : "function" == typeof define && define.amd ? define(["./core.min", "./enc-base64.min", "./md5.min", "./evpkdf.min", "./cipher-core.min"], _0x1f9681) : _0x1f9681(_0x16f4e7.CryptoJS);
+}(this, function (_0x238d0d) {
+  (function () {
+    {
+      var _0x250271 = _0x238d0d,
+        _0x312c4d = _0x250271.lib,
+        _0x70a1df = _0x312c4d.BlockCipher,
+        _0x24d346 = _0x250271.algo,
+        _0x193cb5 = [],
+        _0x596854 = [],
+        _0x9af4d9 = [],
+        _0x490061 = [],
+        _0x3935c3 = [],
+        _0xb2ca82 = [],
+        _0x4e67ff = [],
+        _0x9f4e03 = [],
+        _0x263b4b = [],
+        _0x218e0a = [];
+      !function () {
+        for (var _0x4781ab = [], _0x12de25 = 0; _0x12de25 < 256; _0x12de25++) _0x12de25 < 128 ? _0x4781ab[_0x12de25] = _0x12de25 << 1 : _0x4781ab[_0x12de25] = _0x12de25 << 1 ^ 283;
+        for (var _0x3f9005 = 0, _0x523ee5 = 0, _0x12de25 = 0; _0x12de25 < 256; _0x12de25++) {
+          var _0xb230ba = _0x523ee5 ^ _0x523ee5 << 1 ^ _0x523ee5 << 2 ^ _0x523ee5 << 3 ^ _0x523ee5 << 4;
+          _0xb230ba = _0xb230ba >>> 8 ^ 255 & _0xb230ba ^ 99;
+          _0x193cb5[_0x3f9005] = _0xb230ba;
+          _0x596854[_0xb230ba] = _0x3f9005;
+          var _0x53152e = _0x4781ab[_0x3f9005],
+            _0x49b94e = _0x4781ab[_0x53152e],
+            _0x29d8b9 = _0x4781ab[_0x49b94e],
+            _0x556037 = 257 * _0x4781ab[_0xb230ba] ^ 16843008 * _0xb230ba;
+          _0x9af4d9[_0x3f9005] = _0x556037 << 24 | _0x556037 >>> 8;
+          _0x490061[_0x3f9005] = _0x556037 << 16 | _0x556037 >>> 16;
+          _0x3935c3[_0x3f9005] = _0x556037 << 8 | _0x556037 >>> 24;
+          _0xb2ca82[_0x3f9005] = _0x556037;
+          var _0x556037 = 16843009 * _0x29d8b9 ^ 65537 * _0x49b94e ^ 257 * _0x53152e ^ 16843008 * _0x3f9005;
+          _0x4e67ff[_0xb230ba] = _0x556037 << 24 | _0x556037 >>> 8;
+          _0x9f4e03[_0xb230ba] = _0x556037 << 16 | _0x556037 >>> 16;
+          _0x263b4b[_0xb230ba] = _0x556037 << 8 | _0x556037 >>> 24;
+          _0x218e0a[_0xb230ba] = _0x556037;
+          _0x3f9005 ? (_0x3f9005 = _0x53152e ^ _0x4781ab[_0x4781ab[_0x4781ab[_0x29d8b9 ^ _0x53152e]]], _0x523ee5 ^= _0x4781ab[_0x4781ab[_0x523ee5]]) : _0x3f9005 = _0x523ee5 = 1;
+        }
+      }();
+      var _0x5cd3c7 = [0, 1, 2, 4, 8, 16, 32, 64, 128, 27, 54],
+        _0x351f14 = _0x24d346.AES = _0x70a1df.extend({
+          "_doReset": function () {
+            if (!this._nRounds || this._keyPriorReset !== this._key) {
+              for (var _0x447d2b = this._keyPriorReset = this._key, _0x4757bc = _0x447d2b.words, _0x3d7ee0 = _0x447d2b.sigBytes / 4, _0x2b5d73 = this._nRounds = _0x3d7ee0 + 6, _0x23d27f = 4 * (_0x2b5d73 + 1), _0x65fc42 = this._keySchedule = [], _0x20873f = 0; _0x20873f < _0x23d27f; _0x20873f++) if (_0x20873f < _0x3d7ee0) _0x65fc42[_0x20873f] = _0x4757bc[_0x20873f];else {
+                var _0x252da3 = _0x65fc42[_0x20873f - 1];
+                _0x20873f % _0x3d7ee0 ? _0x3d7ee0 > 6 && _0x20873f % _0x3d7ee0 == 4 && (_0x252da3 = _0x193cb5[_0x252da3 >>> 24] << 24 | _0x193cb5[_0x252da3 >>> 16 & 255] << 16 | _0x193cb5[_0x252da3 >>> 8 & 255] << 8 | _0x193cb5[255 & _0x252da3]) : (_0x252da3 = _0x252da3 << 8 | _0x252da3 >>> 24, _0x252da3 = _0x193cb5[_0x252da3 >>> 24] << 24 | _0x193cb5[_0x252da3 >>> 16 & 255] << 16 | _0x193cb5[_0x252da3 >>> 8 & 255] << 8 | _0x193cb5[255 & _0x252da3], _0x252da3 ^= _0x5cd3c7[_0x20873f / _0x3d7ee0 | 0] << 24);
+                _0x65fc42[_0x20873f] = _0x65fc42[_0x20873f - _0x3d7ee0] ^ _0x252da3;
+              }
+              for (var _0x43c7d6 = this._invKeySchedule = [], _0x4b8f92 = 0; _0x4b8f92 < _0x23d27f; _0x4b8f92++) {
+                {
+                  var _0x20873f = _0x23d27f - _0x4b8f92;
+                  if (_0x4b8f92 % 4) var _0x252da3 = _0x65fc42[_0x20873f];else var _0x252da3 = _0x65fc42[_0x20873f - 4];
+                  _0x4b8f92 < 4 || _0x20873f <= 4 ? _0x43c7d6[_0x4b8f92] = _0x252da3 : _0x43c7d6[_0x4b8f92] = _0x4e67ff[_0x193cb5[_0x252da3 >>> 24]] ^ _0x9f4e03[_0x193cb5[_0x252da3 >>> 16 & 255]] ^ _0x263b4b[_0x193cb5[_0x252da3 >>> 8 & 255]] ^ _0x218e0a[_0x193cb5[255 & _0x252da3]];
+                }
+              }
+            }
+          },
+          "encryptBlock": function (_0x8cd04b, _0x27b69d) {
+            this._doCryptBlock(_0x8cd04b, _0x27b69d, this._keySchedule, _0x9af4d9, _0x490061, _0x3935c3, _0xb2ca82, _0x193cb5);
+          },
+          "decryptBlock": function (_0x24de70, _0x1b331d) {
+            {
+              var _0x23aaac = _0x24de70[_0x1b331d + 1];
+              _0x24de70[_0x1b331d + 1] = _0x24de70[_0x1b331d + 3];
+              _0x24de70[_0x1b331d + 3] = _0x23aaac;
+              this._doCryptBlock(_0x24de70, _0x1b331d, this._invKeySchedule, _0x4e67ff, _0x9f4e03, _0x263b4b, _0x218e0a, _0x596854);
+              var _0x23aaac = _0x24de70[_0x1b331d + 1];
+              _0x24de70[_0x1b331d + 1] = _0x24de70[_0x1b331d + 3];
+              _0x24de70[_0x1b331d + 3] = _0x23aaac;
+            }
+          },
+          "_doCryptBlock": function (_0x279d08, _0x421cb6, _0x1f5d27, _0x1f214c, _0x5afd26, _0x44255d, _0x5d5533, _0x3ae7fa) {
+            {
+              for (var _0x55abf8 = this._nRounds, _0x59cc23 = _0x279d08[_0x421cb6] ^ _0x1f5d27[0], _0xda30d8 = _0x279d08[_0x421cb6 + 1] ^ _0x1f5d27[1], _0x81b02e = _0x279d08[_0x421cb6 + 2] ^ _0x1f5d27[2], _0x3410fb = _0x279d08[_0x421cb6 + 3] ^ _0x1f5d27[3], _0x38322e = 4, _0x2d41be = 1; _0x2d41be < _0x55abf8; _0x2d41be++) {
+                {
+                  var _0x7e1825 = _0x1f214c[_0x59cc23 >>> 24] ^ _0x5afd26[_0xda30d8 >>> 16 & 255] ^ _0x44255d[_0x81b02e >>> 8 & 255] ^ _0x5d5533[255 & _0x3410fb] ^ _0x1f5d27[_0x38322e++],
+                    _0x3eb0da = _0x1f214c[_0xda30d8 >>> 24] ^ _0x5afd26[_0x81b02e >>> 16 & 255] ^ _0x44255d[_0x3410fb >>> 8 & 255] ^ _0x5d5533[255 & _0x59cc23] ^ _0x1f5d27[_0x38322e++],
+                    _0x571a51 = _0x1f214c[_0x81b02e >>> 24] ^ _0x5afd26[_0x3410fb >>> 16 & 255] ^ _0x44255d[_0x59cc23 >>> 8 & 255] ^ _0x5d5533[255 & _0xda30d8] ^ _0x1f5d27[_0x38322e++],
+                    _0x1dd339 = _0x1f214c[_0x3410fb >>> 24] ^ _0x5afd26[_0x59cc23 >>> 16 & 255] ^ _0x44255d[_0xda30d8 >>> 8 & 255] ^ _0x5d5533[255 & _0x81b02e] ^ _0x1f5d27[_0x38322e++];
+                  _0x59cc23 = _0x7e1825;
+                  _0xda30d8 = _0x3eb0da;
+                  _0x81b02e = _0x571a51;
+                  _0x3410fb = _0x1dd339;
+                }
+              }
+              var _0x7e1825 = (_0x3ae7fa[_0x59cc23 >>> 24] << 24 | _0x3ae7fa[_0xda30d8 >>> 16 & 255] << 16 | _0x3ae7fa[_0x81b02e >>> 8 & 255] << 8 | _0x3ae7fa[255 & _0x3410fb]) ^ _0x1f5d27[_0x38322e++],
+                _0x3eb0da = (_0x3ae7fa[_0xda30d8 >>> 24] << 24 | _0x3ae7fa[_0x81b02e >>> 16 & 255] << 16 | _0x3ae7fa[_0x3410fb >>> 8 & 255] << 8 | _0x3ae7fa[255 & _0x59cc23]) ^ _0x1f5d27[_0x38322e++],
+                _0x571a51 = (_0x3ae7fa[_0x81b02e >>> 24] << 24 | _0x3ae7fa[_0x3410fb >>> 16 & 255] << 16 | _0x3ae7fa[_0x59cc23 >>> 8 & 255] << 8 | _0x3ae7fa[255 & _0xda30d8]) ^ _0x1f5d27[_0x38322e++],
+                _0x1dd339 = (_0x3ae7fa[_0x3410fb >>> 24] << 24 | _0x3ae7fa[_0x59cc23 >>> 16 & 255] << 16 | _0x3ae7fa[_0xda30d8 >>> 8 & 255] << 8 | _0x3ae7fa[255 & _0x81b02e]) ^ _0x1f5d27[_0x38322e++];
+              _0x279d08[_0x421cb6] = _0x7e1825;
+              _0x279d08[_0x421cb6 + 1] = _0x3eb0da;
+              _0x279d08[_0x421cb6 + 2] = _0x571a51;
+              _0x279d08[_0x421cb6 + 3] = _0x1dd339;
+            }
+          },
+          "keySize": 8
         });
-      }
-    },
-    pageError: function (_0x4f62dc) {},
-    emptyData: function () {}
-  });
-  _0x1212d4.init();
+      _0x250271.AES = _0x70a1df._createHelper(_0x351f14);
+    }
+  })();
+  return _0x238d0d.AES;
+});
+!function (_0x378d6e, _0x5a1983) {
+  "object" == typeof exports ? module.exports = exports = _0x5a1983(require("./core.min")) : "function" == typeof define && define.amd ? define(["./core.min"], _0x5a1983) : _0x5a1983(_0x378d6e.CryptoJS);
+}(this, function (_0x2fb4f5) {
+  return _0x2fb4f5.enc.Utf8;
+});
+CryptoJS.pad.ZeroPadding = {
+  "pad": function (_0x3aa41f, _0x486ac0) {
+    var _0x57f907 = _0x486ac0 * 4;
+    _0x3aa41f.clamp();
+    _0x3aa41f.sigBytes += _0x57f907 - (_0x3aa41f.sigBytes % _0x57f907 || _0x57f907);
+  },
+  "unpad": function (_0xd8bf7) {
+    var _0x2e649a = _0xd8bf7.words,
+      _0x2fe341 = _0xd8bf7.sigBytes - 1;
+    while (!(_0x2e649a[_0x2fe341 >>> 2] >>> 24 - _0x2fe341 % 4 * 8 & 255)) {
+      _0x2fe341--;
+    }
+    _0xd8bf7.sigBytes = _0x2fe341 + 1;
+  }
+};
+function encrypt(_0x4a92a9) {
+  var _0x1672c8 = CryptoJS.enc.Utf8.parse("XiaoQiang@892145"),
+    _0x28ad88 = CryptoJS.enc.Utf8.parse(_0x4a92a9),
+    _0x117fad = CryptoJS.AES.encrypt(_0x28ad88, _0x1672c8, {
+      "mode": CryptoJS.mode.ECB,
+      "padding": CryptoJS.pad.Pkcs7
+    });
+  return _0x117fad.toString();
 }
-var CDTime = null;
-function countdownTime(_0x135cae, _0x698cec, _0x15a299) {
-  var _0x3624cc;
-  var _0x3d8a18;
-  var _0x37eedb;
-  var _0x4b1028;
-  var _0x51ce13;
-  var _0x13a415;
-  var _0x3cc1ea;
-  var _0x33ae80;
-  var _0xd53dc6;
-  var _0x5a97d1;
-  if (CDTime) {
-    clearInterval(CDTime);
-  }
-  var _0x525731 = new Date();
-  _0x4b1028 = _0x135cae * 1000;
-  var _0xa2ab6f = _0x525731.getTime() + _0x4b1028;
-  if (_0x4b1028 > 0) {
-    _0x3624cc = Math.floor(_0x4b1028 / 1000 / 60 / 60 % 24);
-    if (_0x3624cc < 10) {
-      {
-        _0x51ce13 = "0";
-        _0x33ae80 = "" + _0x3624cc;
-      }
-    } else {
-      {
-        _0x51ce13 = "" + Math.floor(_0x3624cc / 10);
-        _0x33ae80 = "" + _0x3624cc % 10;
-      }
-    }
-    _0x3d8a18 = Math.floor(_0x4b1028 / 1000 / 60 % 60);
-    if (_0x3d8a18 < 10) {
-      {
-        _0x13a415 = "0";
-        _0xd53dc6 = "" + _0x3d8a18;
-      }
-    } else {
-      {
-        _0x13a415 = "" + Math.floor(_0x3d8a18 / 10);
-        _0xd53dc6 = "" + _0x3d8a18 % 10;
-      }
-    }
-    _0x37eedb = Math.floor(_0x4b1028 / 1000 % 60);
-    if (_0x37eedb < 10) {
-      {
-        _0x3cc1ea = "0";
-        _0x5a97d1 = "" + _0x37eedb;
-      }
-    } else {
-      _0x3cc1ea = "" + Math.floor(_0x37eedb / 10);
-      _0x5a97d1 = "" + _0x37eedb % 10;
-    }
-    way.set("gametimes", _0x51ce13 + _0x33ae80 + ":" + _0x13a415 + _0xd53dc6 + ":" + _0x3cc1ea + _0x5a97d1);
-    $(".gametimes").text(_0x51ce13 + _0x33ae80 + ":" + _0x13a415 + _0xd53dc6 + ":" + _0x3cc1ea + _0x5a97d1);
-    way.set("gametimes.h", _0x51ce13 + _0x33ae80);
-    way.set("gametimes.m", _0x13a415 + _0xd53dc6);
-    way.set("gametimes.s", _0x3cc1ea + _0x5a97d1);
-    CDTime = setInterval(function () {
-      _0x4b1028 = _0xa2ab6f - new Date().getTime();
-      if (_0x4b1028 >= 0) {
-        {
-          _0x3624cc = Math.floor(_0x4b1028 / 1000 / 60 / 60 % 24);
-          if (_0x3624cc < 10) {
-            _0x51ce13 = "0";
-            _0x33ae80 = "" + _0x3624cc;
-          } else {
-            {
-              _0x51ce13 = "" + Math.floor(_0x3624cc / 10);
-              _0x33ae80 = "" + _0x3624cc % 10;
-            }
-          }
-          _0x3d8a18 = Math.floor(_0x4b1028 / 1000 / 60 % 60);
-          if (_0x3d8a18 < 10) {
-            _0x13a415 = "0";
-            _0xd53dc6 = "" + _0x3d8a18;
-          } else {
-            _0x13a415 = "" + Math.floor(_0x3d8a18 / 10);
-            _0xd53dc6 = "" + _0x3d8a18 % 10;
-          }
-          _0x37eedb = Math.floor(_0x4b1028 / 1000 % 60);
-          if (_0x37eedb < 10) {
-            _0x3cc1ea = "0";
-            _0x5a97d1 = "" + _0x37eedb;
-          } else {
-            {
-              _0x3cc1ea = "" + Math.floor(_0x37eedb / 10);
-              _0x5a97d1 = "" + _0x37eedb % 10;
-            }
-          }
-          way.set("gametimes", _0x51ce13 + _0x33ae80 + ":" + _0x13a415 + _0xd53dc6 + ":" + _0x3cc1ea + _0x5a97d1);
-          $(".gametimes").text(_0x51ce13 + _0x33ae80 + ":" + _0x13a415 + _0xd53dc6 + ":" + _0x3cc1ea + _0x5a97d1);
-          way.set("gametimes.h", _0x51ce13 + _0x33ae80);
-          way.set("gametimes.m", _0x13a415 + _0xd53dc6);
-          way.set("gametimes.s", _0x3cc1ea + _0x5a97d1);
-        }
-      } else {
-        {
-          clearInterval(CDTime);
-          eval(_0x698cec)(_0x15a299);
-        }
-      }
-    }, 500);
-  } else {
-    eval(_0x698cec)(_0x15a299);
-  }
+function decrypt(_0x196883) {
+  var _0x2cf82d = CryptoJS.enc.Utf8.parse("XiaoQiang@892145"),
+    _0x4b9aa1 = CryptoJS.AES.decrypt(_0x196883, _0x2cf82d, {
+      "mode": CryptoJS.mode.ECB,
+      "padding": CryptoJS.pad.Pkcs7
+    });
+  return CryptoJS.enc.Utf8.stringify(_0x4b9aa1).toString();
 }
-function start() {
-  var _0x3e9f5c = ClockEnv.numRange.split("-");
-  if (ckTimer) {
+var isLocalStorage = isLocalStorageSupported(),
+  xq = {};
+xq.setItem = function (_0x3c8f53, _0x4a002c) {
+  if (isLocalStorage) localStorage.setItem(_0x3c8f53, _0x4a002c);else {
     {
-      openLottery(ClockEnv.num, _0x3e9f5c[1]);
+      var _0x387a69 = new Date();
+      _0x387a69.setDate(_0x387a69.getDate() + 3650);
+      document.cookie = _0x3c8f53 + "=" + encodeURIComponent(_0x4a002c) + ";expires=" + _0x387a69;
     }
   }
-}
-var T10;
-var T9;
-var T8;
-var T7;
-var T6;
-var T5;
-var T4;
-var T3;
-var T2;
-var T1;
-function openLottery(_0x36c4f0, _0x1f8eb3) {
-  if (T10) {
-    {
-      clearInterval(T10);
-      way.set("showExpect.openCode10", " ");
+};
+xq.getItem = function (_0x110c12) {
+  if (isLocalStorage) return localStorage.getItem(_0x110c12);else {
+    try {
+      return decodeURIComponent(document.cookie.match(new RegExp("(^|\\s)" + _0x110c12 + "=([^;]+)(;|$)"))[2]);
+    } catch (_0xc87c9e) {
+      return null;
     }
   }
-  if (T9) {
-    clearInterval(T9);
-    way.set("showExpect.openCode9", " ");
-  }
-  if (T8) {
-    clearInterval(T8);
-    way.set("showExpect.openCode8", " ");
-  }
-  if (T7) {
-    clearInterval(T7);
-    way.set("showExpect.openCode7", " ");
-  }
-  if (T6) {
-    clearInterval(T6);
-    way.set("showExpect.openCode6", " ");
-  }
-  if (T5) {
-    clearInterval(T5);
-    way.set("showExpect.openCode5", " ");
-  }
-  if (T4) {
-    {
-      clearInterval(T4);
-      way.set("showExpect.openCode4", " ");
-    }
-  }
-  if (T3) {
-    clearInterval(T3);
-    way.set("showExpect.openCode3", " ");
-  }
-  if (T2) {
-    {
-      clearInterval(T2);
-      way.set("showExpect.openCode2", " ");
-    }
-  }
-  if (T1) {
-    clearInterval(T1);
-    way.set("showExpect.openCode1", " ");
-  }
-  var _0x5b38f9 = $("#qiuanimation3");
-  if (_0x5b38f9.length > 0) {
-    {
-      _0x5b38f9.hide();
-      _0x5b38f9.find("div.bigone").empty();
-      _0x5b38f9.find("div.bigone").hide();
-    }
-  }
-  var _0x139e79 = $("#qiuanimation5");
-  if (_0x139e79.length > 0) {
-    {
-      _0x139e79.hide();
-      _0x139e79.find("div.bigone").empty();
-      _0x139e79.find("div.bigone").hide();
-    }
-  }
-  $(".kaijq").find("ul").hide();
-  if (_0x36c4f0 == 3) {
-    {
-      $(".lotter-bigqiu3").show();
-    }
-  } else {
-    if (_0x36c4f0 == 5) {
-      {
-        $(".lotter-bigqiu5").show();
-      }
-    } else {
-      if (_0x36c4f0 == 8) {
-        $(".lotter-bigsmll8").show();
-      } else {
-        if (_0x36c4f0 == 10) {
-          $(".lotter-bigsmll10").show();
-        }
-      }
-    }
-  }
-  Lottery(_0x36c4f0, _0x1f8eb3);
-}
-function Lottery(_0x1acf9c, _0x467f72) {
-  if (_0x1acf9c >= 10) {
-    T10 = window.setInterval(function () {
-      {
-        openLottery10(_0x467f72);
-      }
-    }, 50);
-  }
-  if (_0x1acf9c >= 9) {
-    T9 = window.setInterval(function () {
-      openLottery9(_0x467f72);
-    }, 50);
-  }
-  if (_0x1acf9c >= 8) {
-    {
-      T8 = window.setInterval(function () {
-        openLottery8(_0x467f72);
-      }, 50);
-    }
-  }
-  if (_0x1acf9c >= 7) {
-    T7 = window.setInterval(function () {
-      openLottery7(_0x467f72);
-    }, 50);
-  }
-  if (_0x1acf9c >= 6) {
-    {
-      T6 = window.setInterval(function () {
-        {
-          openLottery6(_0x467f72);
-        }
-      }, 50);
-    }
-  }
-  if (_0x1acf9c >= 5) {
-    T5 = window.setInterval(function () {
-      openLottery5(_0x467f72);
-    }, 50);
-  }
-  if (_0x1acf9c >= 4) {
-    T4 = window.setInterval(function () {
-      openLottery4(_0x467f72);
-    }, 50);
-  }
-  if (_0x1acf9c >= 3) {
-    T3 = window.setInterval(function () {
-      openLottery3(_0x467f72);
-    }, 50);
-  }
-  if (_0x1acf9c >= 2) {
-    T2 = window.setInterval(function () {
-      openLottery2(_0x467f72);
-    }, 50);
-  }
-  if (_0x1acf9c >= 1) {
-    {
-      T1 = window.setInterval(function () {
-        openLottery1(_0x467f72);
-      }, 50);
-    }
-  }
-}
-function openLottery1(_0x47cc7b) {
-  $("[way-data=\"showExpect.openCode1\"]").html("<b class=\"bet-item\"><i data-v-e60a1042=\"\" class=\"Dice Dice" + Math.round(Math.random() * (_0x47cc7b - 1) + 1) + "\"></i></b>");
-}
-function openLottery2(_0x37e195) {
-  $("[way-data=\"showExpect.openCode2\"]").html("<b class=\"bet-item\"><i data-v-e60a1042=\"\" class=\"Dice Dice" + Math.round(Math.random() * (_0x37e195 - 1) + 1) + "\"></i></b>");
-}
-function openLottery3(_0x299a07) {
-  $("[way-data=\"showExpect.openCode3\"]").html("<b class=\"bet-item\"><i data-v-e60a1042=\"\" class=\"Dice Dice" + Math.round(Math.random() * (_0x299a07 - 1) + 1) + "\"></i></b>");
-}
-function stopLottery(_0xa529c0) {
-  var _0xe09f7e = _0xa529c0.split(",");
-  if (_0xe09f7e.length >= 10) {
-    setTimeout(function () {
-      clearInterval(T10);
-      way.set("showExpect.openCode10", _0xe09f7e[9] + "");
-    }, 4000);
-  }
-  if (_0xe09f7e.length >= 9) {
-    setTimeout(function () {
-      clearInterval(T9);
-      way.set("showExpect.openCode9", _0xe09f7e[8] + "");
-    }, 4000);
-  }
-  if (_0xe09f7e.length >= 8) {
-    {
-      setTimeout(function () {
-        clearInterval(T8);
-        way.set("showExpect.openCode8", _0xe09f7e[7] + "");
-      }, 4000);
-    }
-  }
-  if (_0xe09f7e.length >= 7) {
-    {
-      setTimeout(function () {
-        clearInterval(T7);
-        way.set("showExpect.openCode7", _0xe09f7e[6] + "");
-      }, 3500);
-    }
-  }
-  if (_0xe09f7e.length >= 6) {
-    {
-      setTimeout(function () {
-        clearInterval(T6);
-        way.set("showExpect.openCode6", _0xe09f7e[5] + "");
-      }, 3000);
-    }
-  }
-  if (_0xe09f7e.length >= 5) {
-    {
-      setTimeout(function () {
-        {
-          clearInterval(T5);
-          way.set("showExpect.openCode5", _0xe09f7e[4] + "");
-        }
-      }, 2500);
-    }
-  }
-  if (_0xe09f7e.length >= 4) {
-    setTimeout(function () {
-      clearInterval(T4);
-      way.set("showExpect.openCode4", _0xe09f7e[3] + "");
-    }, 2000);
-  }
-  if (_0xe09f7e.length >= 3) {
-    setTimeout(function () {
-      clearInterval(T3);
-      $("[way-data=\"showExpect.openCode3\"]").html("<b class=\"bet-item\"><i data-v-e60a1042=\"\" class=\"Dice Dice" + _0xe09f7e[2] + "\"></i></b>");
-    }, 1500);
-  }
-  if (_0xe09f7e.length >= 2) {
-    setTimeout(function () {
-      {
-        clearInterval(T2);
-        $("[way-data=\"showExpect.openCode2\"]").html("<b class=\"bet-item\"><i data-v-e60a1042=\"\" class=\"Dice Dice" + _0xe09f7e[1] + "\"></i></b>");
-      }
-    }, 1000);
-  }
-  if (_0xe09f7e.length >= 1) {
-    setTimeout(function () {
-      {
-        clearInterval(T1);
-        $("[way-data=\"showExpect.openCode1\"]").html("<b class=\"bet-item\"><i data-v-e60a1042=\"\" class=\"Dice Dice" + _0xe09f7e[0] + "\"></i></b>");
-      }
-    }, 200);
-  }
-}
-function strCut(_0x500931, _0x26cd24) {
-  var _0x542eaf = _0x500931.length;
-  if (_0x542eaf == 0) {
-    return false;
-  }
-  var _0x205c0f = Math.ceil(_0x542eaf / _0x26cd24);
-  var _0x1559c0 = Array();
-  for (var _0x55ca0e = 0; _0x55ca0e < _0x205c0f; _0x55ca0e++) {
-    _0x1559c0[_0x55ca0e] = _0x500931.substr(_0x55ca0e * _0x26cd24, _0x26cd24);
-  }
-  return _0x1559c0;
-}
-function Sames(_0x34275b, _0x425433) {
-  var _0x47ba22 = 0;
-  for (i = 0; i < _0x34275b.length; i++) {
-    {
-      var _0x471679 = 0;
-      for (j = 0; j < _0x425433.length; j++) {
-        {
-          if (_0x34275b[i] - _0x425433[j] == 0) {
-            _0x471679 = 1;
-          }
-        }
-      }
-      if (_0x471679 == 1) {
-        _0x47ba22 += 1;
-      }
-    }
-  }
-  return _0x47ba22;
-}
-function Combination(_0x56d4b1, _0x4d07b2) {
-  _0x4d07b2 = parseInt(_0x4d07b2);
-  _0x56d4b1 = parseInt(_0x56d4b1);
-  if (_0x4d07b2 < 0 || _0x56d4b1 < 0) {
-    return false;
-  }
-  if (_0x4d07b2 == 0 || _0x56d4b1 == 0) {
-    return 1;
-  }
-  if (_0x4d07b2 > _0x56d4b1) {
-    return 0;
-  }
-  if (_0x4d07b2 > _0x56d4b1 / 2) {
-    {
-      _0x4d07b2 = _0x56d4b1 - _0x4d07b2;
-    }
-  }
-  var _0x3d1485 = 0;
-  for (i = _0x56d4b1; i >= _0x56d4b1 - _0x4d07b2 + 1; i--) {
-    _0x3d1485 += Math.log(i);
-  }
-  for (i = _0x4d07b2; i >= 1; i--) {
-    _0x3d1485 -= Math.log(i);
-  }
-  _0x3d1485 = Math.exp(_0x3d1485);
-  return Math.round(_0x3d1485);
-}
-function filterArray(_0x205de) {
-  var _0x2de028 = 0;
-  var _0x37db38 = _0x205de.length;
-  var _0x4e402d = new Array();
-  for (var _0x53e977 = 0; _0x53e977 < _0x37db38; _0x53e977++) {
-    {
-      for (var _0xe048e1 = _0x53e977 + 1; _0xe048e1 < _0x37db38; _0xe048e1++) {
-        if (_0x205de[_0x53e977] == _0x205de[_0xe048e1]) {
-          _0x205de[_0x53e977] = null;
-          break;
-        }
-      }
-    }
-  }
-  for (var _0x53e977 = 0; _0x53e977 < _0x37db38; _0x53e977++) {
-    {
-      if (_0x205de[_0x53e977]) {
-        _0x4e402d[_0x2de028++] = _0x205de[_0x53e977];
-      }
-    }
-  }
-  return _0x4e402d;
-}
-function isRepeat(_0x128d3d) {
-  var _0x2ddeb1 = {};
-  for (var _0x4a5f65 in _0x128d3d) {
-    if (_0x2ddeb1[_0x128d3d[_0x4a5f65]]) {
-      return true;
-    }
-    _0x2ddeb1[_0x128d3d[_0x4a5f65]] = true;
-  }
-  return false;
-}
-function DescartesAlgorithm() {
-  var _0x2ac7f1;
-  var _0x5cf2ad;
-  var _0x419c53 = [];
-  var _0x498d55 = [];
-  var _0x50ee5f = [];
-  if (arguments.length == 1) {
-    {
-      if (!Array.isArray(arguments[0])) {
-        return [arguments[0]];
-      } else {
-        {
-          return arguments[0];
-        }
-      }
-    }
-  }
-  if (arguments.length > 2) {
-    {
-      for (_0x2ac7f1 = 0; _0x2ac7f1 < arguments.length - 1; _0x2ac7f1++) {
-        _0x419c53[_0x2ac7f1] = arguments[_0x2ac7f1];
-      }
-      _0x498d55 = arguments[_0x2ac7f1];
-      return arguments.callee(arguments.callee.apply(null, _0x419c53), _0x498d55);
-    }
-  }
-  if (Array.isArray(arguments[0])) {
-    _0x419c53 = arguments[0];
-  } else {
-    _0x419c53 = [arguments[0]];
-  }
-  if (Array.isArray(arguments[1])) {
-    {
-      _0x498d55 = arguments[1];
-    }
-  } else {
-    _0x498d55 = [arguments[1]];
-  }
-  for (_0x2ac7f1 = 0; _0x2ac7f1 < _0x419c53.length; _0x2ac7f1++) {
-    {
-      for (_0x5cf2ad = 0; _0x5cf2ad < _0x498d55.length; _0x5cf2ad++) {
-        {
-          if (Array.isArray(_0x419c53[_0x2ac7f1])) {
-            {
-              _0x50ee5f.push(_0x419c53[_0x2ac7f1].concat(_0x498d55[_0x5cf2ad]));
-            }
-          } else {
-            _0x50ee5f.push([_0x419c53[_0x2ac7f1], _0x498d55[_0x5cf2ad]]);
-          }
-        }
-      }
-    }
-  }
-  return _0x50ee5f;
-}
-function combine(_0x352692, _0x17f936) {
-  var _0x2b3ddc = [];
-  (function f(_0x4c2659, _0x2c95d4, _0x42a091) {
-    if (_0x42a091 == 0) {
-      return _0x2b3ddc.push(_0x4c2659);
-    }
-    for (var _0x4dc3d0 = 0, _0x33afc3 = _0x2c95d4.length; _0x4dc3d0 <= _0x33afc3 - _0x42a091; _0x4dc3d0++) {
-      f(_0x4c2659.concat(_0x2c95d4[_0x4dc3d0]), _0x2c95d4.slice(_0x4dc3d0 + 1), _0x42a091 - 1);
-    }
-  })([], _0x352692, _0x17f936);
-  return _0x2b3ddc;
-}
-function permutation(_0x55636c, _0x3e6595) {
-  var _0x398674 = [];
-  (function f(_0x3bf274, _0x3b526d, _0x103e40) {
-    if (_0x103e40 == 0) {
-      return _0x398674.push(_0x3bf274);
-    }
-    for (var _0x4dfee8 = 0, _0x27af6e = _0x3b526d.length; _0x4dfee8 < _0x27af6e; _0x4dfee8++) {
-      f(_0x3bf274.concat(_0x3b526d[_0x4dfee8]), _0x3b526d.slice(0, _0x4dfee8).concat(_0x3b526d.slice(_0x4dfee8 + 1)), _0x103e40 - 1);
-    }
-  })([], _0x55636c, _0x3e6595);
-  return _0x398674;
-}
-(function (_0x49f8a6, _0x381cea, _0x4f783a) {
-  _0x4f783a = "al";
+};
+function isLocalStorageSupported() {
   try {
-    {
-      _0x4f783a += "ert";
-      _0x381cea = encode_version;
-      if (!(typeof _0x381cea !== "undefined" && _0x381cea === "jsjiami.com.v5")) {
-        {
-          _0x49f8a6[_0x4f783a]("删除版本号，js会定期弹窗，还请支持我们的工作");
-        }
-      }
-    }
-  } catch (_0x35f439) {
-    _0x49f8a6[_0x4f783a]("删除版本号，js会定期弹窗");
+    localStorage.setItem("__xq__", "xq");
+    localStorage.removeItem("__xq__");
+    return true;
+  } catch (_0x30e753) {
+    return false;
   }
-})(window);
-encode_version = "jsjiami.com.v5";
+}
+function uuid() {
+  var _0x42a61c = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    _0x4fc04f = _0x42a61c.split(""),
+    _0x9b541f = "";
+  for (var _0xfcb87d = 0; _0xfcb87d < 32; _0xfcb87d++) _0x9b541f += _0x4fc04f[Math.floor(Math.random() * 62)];
+  return _0x9b541f;
+}
+generateKey();
+setInterval("generateKey()", (new Date().getTime() % 30 + 1) * 1000);
+function generateKey() {
+  if (xq.getItem("xqId") == null || xq.getItem("xqId") == undefined) xq.setItem("xqId", uuid());
+  var _0x5e00b7 = xq.getItem("xqId");
+  var _0x51967f = _0x5e00b7.split("");
+  var _0x33cc96 = new Date().getTime();
+  var _0x4b2370 = (_0x33cc96 + "").split("");
+  var _0x11a56c = _0x51967f[0] + _0x51967f[1] + _0x51967f[2] + _0x4b2370[12] + _0x51967f[3] + _0x51967f[4] + _0x4b2370[11] + _0x51967f[5] + _0x51967f[6] + _0x4b2370[10] + _0x51967f[7] + _0x51967f[8] + _0x4b2370[9] + _0x51967f[9] + _0x51967f[10] + _0x4b2370[8] + _0x51967f[11] + _0x51967f[12] + _0x4b2370[7] + _0x51967f[13] + _0x51967f[14] + _0x4b2370[6] + _0x51967f[15] + _0x51967f[16] + _0x4b2370[5] + _0x51967f[17] + _0x51967f[18] + _0x4b2370[4] + _0x51967f[19] + _0x51967f[20] + _0x4b2370[3] + _0x51967f[21] + _0x51967f[22] + _0x4b2370[2] + _0x51967f[23] + _0x51967f[24] + _0x4b2370[1] + _0x51967f[25] + _0x51967f[26] + _0x4b2370[0] + _0x51967f[27] + _0x51967f[28] + _0x51967f[29] + _0x51967f[30] + _0x51967f[31];
+  xq.setItem("xqKey", _0x11a56c);
+}
